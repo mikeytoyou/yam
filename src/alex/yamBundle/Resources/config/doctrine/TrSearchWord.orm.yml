@@ -1,0 +1,36 @@
+alex\yamBundle\Entity\TrSearchWord:
+    type: entity
+    table: tr_search_word
+    uniqueConstraints:
+        id_lang:
+            columns:
+                - id_lang
+                - id_shop
+                - word
+    id:
+        idWord:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_word
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_lang
+        word:
+            type: string
+            nullable: false
+            length: 15
+            fixed: false
+    lifecycleCallbacks: {  }

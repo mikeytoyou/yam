@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrOrderStateLang:
+    type: entity
+    table: tr_order_state_lang
+    id:
+        idOrderState:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_state
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        template:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+    lifecycleCallbacks: {  }

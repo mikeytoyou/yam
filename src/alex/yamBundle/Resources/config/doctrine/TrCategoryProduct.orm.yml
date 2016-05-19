@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrCategoryProduct:
+    type: entity
+    table: tr_category_product
+    indexes:
+        id_product:
+            columns:
+                - id_product
+    id:
+        idCategory:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_category
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+    fields:
+        position:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+    lifecycleCallbacks: {  }

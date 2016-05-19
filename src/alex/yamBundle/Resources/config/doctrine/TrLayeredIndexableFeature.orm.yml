@@ -1,0 +1,18 @@
+alex\yamBundle\Entity\TrLayeredIndexableFeature:
+    type: entity
+    table: tr_layered_indexable_feature
+    id:
+        idFeature:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_feature
+            generator:
+                strategy: IDENTITY
+    fields:
+        indexable:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

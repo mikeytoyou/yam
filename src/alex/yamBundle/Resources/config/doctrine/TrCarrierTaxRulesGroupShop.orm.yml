@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrCarrierTaxRulesGroupShop:
+    type: entity
+    table: tr_carrier_tax_rules_group_shop
+    id:
+        idCarrier:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_carrier
+        idTaxRulesGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_tax_rules_group
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

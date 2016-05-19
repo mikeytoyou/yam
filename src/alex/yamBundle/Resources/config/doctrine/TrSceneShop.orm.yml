@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrSceneShop:
+    type: entity
+    table: tr_scene_shop
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idScene:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_scene
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

@@ -1,0 +1,36 @@
+alex\yamBundle\Entity\TrAttachment:
+    type: entity
+    table: tr_attachment
+    id:
+        idAttachment:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_attachment
+            generator:
+                strategy: IDENTITY
+    fields:
+        file:
+            type: string
+            nullable: false
+            length: 40
+            fixed: false
+        fileName:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            column: file_name
+        fileSize:
+            type: bigint
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: file_size
+        mime:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+    lifecycleCallbacks: {  }

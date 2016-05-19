@@ -1,0 +1,37 @@
+alex\yamBundle\Entity\Incluye:
+    type: entity
+    table: incluye
+    indexes:
+        FK_incluye_paquete:
+            columns:
+                - paquete_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 40
+            fixed: false
+        valor:
+            type: string
+            nullable: true
+            length: 40
+            fixed: false
+    manyToOne:
+        paquete:
+            targetEntity: Paquete
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                paquete_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

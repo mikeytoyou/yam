@@ -1,0 +1,22 @@
+alex\yamBundle\Entity\TrDateRange:
+    type: entity
+    table: tr_date_range
+    id:
+        idDateRange:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_date_range
+            generator:
+                strategy: IDENTITY
+    fields:
+        timeStart:
+            type: datetime
+            nullable: false
+            column: time_start
+        timeEnd:
+            type: datetime
+            nullable: false
+            column: time_end
+    lifecycleCallbacks: {  }

@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrOrderReturnStateLang:
+    type: entity
+    table: tr_order_return_state_lang
+    id:
+        idOrderReturnState:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_return_state
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+    lifecycleCallbacks: {  }

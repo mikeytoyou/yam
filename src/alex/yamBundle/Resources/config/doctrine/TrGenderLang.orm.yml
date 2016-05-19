@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrGenderLang:
+    type: entity
+    table: tr_gender_lang
+    indexes:
+        id_gender:
+            columns:
+                - id_gender
+    id:
+        idGender:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_gender
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+    lifecycleCallbacks: {  }

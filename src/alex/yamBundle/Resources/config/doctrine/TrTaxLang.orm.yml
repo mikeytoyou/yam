@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrTaxLang:
+    type: entity
+    table: tr_tax_lang
+    id:
+        idTax:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_tax
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,64 @@
+alex\yamBundle\Entity\TrCurrency:
+    type: entity
+    table: tr_currency
+    id:
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_currency
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        isoCode:
+            type: string
+            nullable: false
+            length: 3
+            fixed: false
+            default: '0'
+            column: iso_code
+        isoCodeNum:
+            type: string
+            nullable: false
+            length: 3
+            fixed: false
+            default: '0'
+            column: iso_code_num
+        sign:
+            type: string
+            nullable: false
+            length: 8
+            fixed: false
+        blank:
+            type: boolean
+            nullable: false
+            default: '0'
+        format:
+            type: boolean
+            nullable: false
+            default: '0'
+        decimals:
+            type: boolean
+            nullable: false
+            default: '1'
+        conversionRate:
+            type: decimal
+            nullable: false
+            precision: 13
+            scale: 6
+            column: conversion_rate
+        deleted:
+            type: boolean
+            nullable: false
+            default: '0'
+        active:
+            type: boolean
+            nullable: false
+            default: '1'
+    lifecycleCallbacks: {  }

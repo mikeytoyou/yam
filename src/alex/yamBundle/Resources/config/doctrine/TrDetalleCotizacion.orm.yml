@@ -1,0 +1,73 @@
+alex\yamBundle\Entity\TrDetalleCotizacion:
+    type: entity
+    table: tr_detalle_cotizacion
+    id:
+        idDetalCotizacion:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_detal_cotizacion
+            generator:
+                strategy: IDENTITY
+    fields:
+        titulo:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        precioAdulto:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 0
+            column: precio_adulto
+        precioNinio:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 0
+            column: precio_ninio
+        idMoneda:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_moneda
+        totalConImpuesto:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: total_con_impuesto
+        totalSinImpuesto:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: total_sin_impuesto
+        totalTasaCambio:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: total_tasa_cambio
+        tasaCambio:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 0
+            column: tasa_cambio
+        dateAdd:
+            type: datetime
+            nullable: true
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: true
+            column: date_upd
+        idCotizacion:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_cotizacion
+    lifecycleCallbacks: {  }

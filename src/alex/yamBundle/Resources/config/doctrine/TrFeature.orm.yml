@@ -1,0 +1,19 @@
+alex\yamBundle\Entity\TrFeature:
+    type: entity
+    table: tr_feature
+    id:
+        idFeature:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_feature
+            generator:
+                strategy: IDENTITY
+    fields:
+        position:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+    lifecycleCallbacks: {  }

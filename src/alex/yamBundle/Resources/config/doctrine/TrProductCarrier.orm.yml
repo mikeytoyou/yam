@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrProductCarrier:
+    type: entity
+    table: tr_product_carrier
+    id:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+        idCarrierReference:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_carrier_reference
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

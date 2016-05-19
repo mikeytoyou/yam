@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrGroupShop:
+    type: entity
+    table: tr_group_shop
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_group
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

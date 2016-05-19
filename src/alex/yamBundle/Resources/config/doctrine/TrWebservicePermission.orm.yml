@@ -1,0 +1,45 @@
+alex\yamBundle\Entity\TrWebservicePermission:
+    type: entity
+    table: tr_webservice_permission
+    indexes:
+        resource:
+            columns:
+                - resource
+        method:
+            columns:
+                - method
+        id_webservice_account:
+            columns:
+                - id_webservice_account
+    uniqueConstraints:
+        resource_2:
+            columns:
+                - resource
+                - method
+                - id_webservice_account
+    id:
+        idWebservicePermission:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_webservice_permission
+            generator:
+                strategy: IDENTITY
+    fields:
+        resource:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+        method:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+        idWebserviceAccount:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_webservice_account
+    lifecycleCallbacks: {  }

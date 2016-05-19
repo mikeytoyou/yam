@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrAttributeShop:
+    type: entity
+    table: tr_attribute_shop
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_attribute
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

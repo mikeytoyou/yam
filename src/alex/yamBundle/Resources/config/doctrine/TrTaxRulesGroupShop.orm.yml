@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrTaxRulesGroupShop:
+    type: entity
+    table: tr_tax_rules_group_shop
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idTaxRulesGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_tax_rules_group
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

@@ -1,0 +1,33 @@
+alex\yamBundle\Entity\TrSpecificPriceRuleCondition:
+    type: entity
+    table: tr_specific_price_rule_condition
+    indexes:
+        id_specific_price_rule_condition_group:
+            columns:
+                - id_specific_price_rule_condition_group
+    id:
+        idSpecificPriceRuleCondition:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_specific_price_rule_condition
+            generator:
+                strategy: IDENTITY
+    fields:
+        idSpecificPriceRuleConditionGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_specific_price_rule_condition_group
+        type:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+        value:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,50 @@
+alex\yamBundle\Entity\TrCotizacion:
+    type: entity
+    table: tr_cotizacion
+    id:
+        idCotizacion:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_cotizacion
+            generator:
+                strategy: IDENTITY
+    fields:
+        numAdultos:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 0
+            column: num_adultos
+        numNinios:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 0
+            column: num_ninios
+        idEstado:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_estado
+        idPlantilla:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_plantilla
+        dateAdd:
+            type: datetime
+            nullable: true
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: true
+            column: date_upd
+        tipoVuelo:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: tipo_vuelo
+    lifecycleCallbacks: {  }

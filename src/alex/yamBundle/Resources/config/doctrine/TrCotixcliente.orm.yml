@@ -1,0 +1,37 @@
+alex\yamBundle\Entity\TrCotixcliente:
+    type: entity
+    table: tr_cotixcliente
+    id:
+        idCotixcliente:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_cotixcliente
+            generator:
+                strategy: IDENTITY
+    fields:
+        idCotizacion:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_cotizacion
+        idCliente:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_cliente
+        tipo:
+            type: string
+            nullable: true
+            length: 70
+            fixed: false
+        dateAdd:
+            type: datetime
+            nullable: true
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: true
+            column: date_upd
+    lifecycleCallbacks: {  }

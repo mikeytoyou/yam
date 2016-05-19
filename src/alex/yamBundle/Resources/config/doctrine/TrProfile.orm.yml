@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrProfile:
+    type: entity
+    table: tr_profile
+    id:
+        idProfile:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_profile
+            generator:
+                strategy: IDENTITY
+    fields:
+        supervicion:
+            type: boolean
+            nullable: true
+    lifecycleCallbacks: {  }

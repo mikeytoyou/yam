@@ -1,0 +1,19 @@
+alex\yamBundle\Entity\TrTimezone:
+    type: entity
+    table: tr_timezone
+    id:
+        idTimezone:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_timezone
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrMemcachedServers:
+    type: entity
+    table: tr_memcached_servers
+    id:
+        idMemcachedServer:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_memcached_server
+            generator:
+                strategy: IDENTITY
+    fields:
+        ip:
+            type: string
+            nullable: false
+            length: 254
+            fixed: false
+        port:
+            type: integer
+            nullable: false
+            unsigned: true
+        weight:
+            type: integer
+            nullable: false
+            unsigned: true
+    lifecycleCallbacks: {  }

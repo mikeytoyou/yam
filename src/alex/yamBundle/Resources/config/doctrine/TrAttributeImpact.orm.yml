@@ -1,0 +1,39 @@
+alex\yamBundle\Entity\TrAttributeImpact:
+    type: entity
+    table: tr_attribute_impact
+    uniqueConstraints:
+        id_product:
+            columns:
+                - id_product
+                - id_attribute
+    id:
+        idAttributeImpact:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_attribute_impact
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product
+        idAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_attribute
+        weight:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+        price:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 2
+    lifecycleCallbacks: {  }

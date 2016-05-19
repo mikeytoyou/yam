@@ -1,0 +1,170 @@
+alex\yamBundle\Entity\TrProductShop:
+    type: entity
+    table: tr_product_shop
+    indexes:
+        id_category_default:
+            columns:
+                - id_category_default
+        date_add:
+            columns:
+                - date_add
+                - active
+                - visibility
+    id:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    fields:
+        idCategoryDefault:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_category_default
+        idTaxRulesGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_tax_rules_group
+        onSale:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: on_sale
+        onlineOnly:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: online_only
+        ecotax:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 6
+            default: '0.000000'
+        minimalQuantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: minimal_quantity
+        price:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+        wholesalePrice:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: wholesale_price
+        unity:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        unitPriceRatio:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: unit_price_ratio
+        additionalShippingCost:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 2
+            default: '0.00'
+            column: additional_shipping_cost
+        customizable:
+            type: boolean
+            nullable: false
+            default: '0'
+        uploadableFiles:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: uploadable_files
+        textFields:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: text_fields
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+        redirectType:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            default: ''
+            column: redirect_type
+        idProductRedirected:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_product_redirected
+        availableForOrder:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: available_for_order
+        availableDate:
+            type: date
+            nullable: false
+            column: available_date
+        condition:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            default: new
+        showPrice:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: show_price
+        indexed:
+            type: boolean
+            nullable: false
+            default: '0'
+        visibility:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            default: both
+        cacheDefaultAttribute:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: cache_default_attribute
+        advancedStockManagement:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: advanced_stock_management
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: false
+            column: date_upd
+    lifecycleCallbacks: {  }

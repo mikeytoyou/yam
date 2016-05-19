@@ -1,0 +1,19 @@
+alex\yamBundle\Entity\TrWebBrowser:
+    type: entity
+    table: tr_web_browser
+    id:
+        idWebBrowser:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_web_browser
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrCarrierZone:
+    type: entity
+    table: tr_carrier_zone
+    id:
+        idCarrier:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_carrier
+        idZone:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_zone
+    lifecycleCallbacks: {  }

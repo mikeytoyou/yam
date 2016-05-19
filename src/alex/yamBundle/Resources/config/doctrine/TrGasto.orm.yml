@@ -1,0 +1,32 @@
+alex\yamBundle\Entity\TrGasto:
+    type: entity
+    table: tr_gasto
+    uniqueConstraints:
+        id_gasto:
+            columns:
+                - id_gasto
+    id:
+        idGasto:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_gasto
+        idCircuito:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_circuito
+    fields:
+        descripcion:
+            type: string
+            nullable: false
+            length: 35
+            fixed: false
+        monto:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+    lifecycleCallbacks: {  }

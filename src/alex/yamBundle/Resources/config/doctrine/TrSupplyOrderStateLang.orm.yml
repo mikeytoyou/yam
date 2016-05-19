@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrSupplyOrderStateLang:
+    type: entity
+    table: tr_supply_order_state_lang
+    id:
+        idSupplyOrderState:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_supply_order_state
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+    lifecycleCallbacks: {  }

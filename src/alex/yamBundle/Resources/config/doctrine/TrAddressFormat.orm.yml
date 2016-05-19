@@ -1,0 +1,20 @@
+alex\yamBundle\Entity\TrAddressFormat:
+    type: entity
+    table: tr_address_format
+    id:
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_country
+            generator:
+                strategy: IDENTITY
+    fields:
+        format:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            default: ''
+    lifecycleCallbacks: {  }

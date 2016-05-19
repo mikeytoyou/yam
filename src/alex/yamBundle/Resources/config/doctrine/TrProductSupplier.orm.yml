@@ -1,0 +1,54 @@
+alex\yamBundle\Entity\TrProductSupplier:
+    type: entity
+    table: tr_product_supplier
+    uniqueConstraints:
+        id_product:
+            columns:
+                - id_product
+                - id_product_attribute
+                - id_supplier
+    id:
+        idProductSupplier:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product_supplier
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product
+        idProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_product_attribute
+        idSupplier:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_supplier
+        productSupplierReference:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            column: product_supplier_reference
+        productSupplierPriceTe:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: product_supplier_price_te
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_currency
+    lifecycleCallbacks: {  }

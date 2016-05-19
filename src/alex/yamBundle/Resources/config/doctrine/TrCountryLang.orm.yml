@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrCountryLang:
+    type: entity
+    table: tr_country_lang
+    id:
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_country
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+    lifecycleCallbacks: {  }

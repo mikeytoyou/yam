@@ -1,0 +1,24 @@
+alex\yamBundle\Entity\TrCmsBlockLang:
+    type: entity
+    table: tr_cms_block_lang
+    id:
+        idCmsBlock:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cms_block
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 40
+            fixed: false
+            default: ''
+    lifecycleCallbacks: {  }

@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrImportMatch:
+    type: entity
+    table: tr_import_match
+    id:
+        idImportMatch:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_import_match
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        match:
+            type: text
+            nullable: false
+            length: 65535
+            fixed: false
+        skip:
+            type: integer
+            nullable: false
+            unsigned: false
+    lifecycleCallbacks: {  }

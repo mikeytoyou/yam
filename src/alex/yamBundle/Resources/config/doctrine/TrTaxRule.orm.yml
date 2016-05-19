@@ -1,0 +1,68 @@
+alex\yamBundle\Entity\TrTaxRule:
+    type: entity
+    table: tr_tax_rule
+    indexes:
+        id_tax_rules_group:
+            columns:
+                - id_tax_rules_group
+        id_tax:
+            columns:
+                - id_tax
+        category_getproducts:
+            columns:
+                - id_tax_rules_group
+                - id_country
+                - id_state
+                - zipcode_from
+    id:
+        idTaxRule:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_tax_rule
+            generator:
+                strategy: IDENTITY
+    fields:
+        idTaxRulesGroup:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_tax_rules_group
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_country
+        idState:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_state
+        zipcodeFrom:
+            type: string
+            nullable: false
+            length: 12
+            fixed: false
+            column: zipcode_from
+        zipcodeTo:
+            type: string
+            nullable: false
+            length: 12
+            fixed: false
+            column: zipcode_to
+        idTax:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_tax
+        behavior:
+            type: integer
+            nullable: false
+            unsigned: false
+        description:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+    lifecycleCallbacks: {  }

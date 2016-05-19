@@ -1,0 +1,24 @@
+alex\yamBundle\Entity\TrCartRuleProductRule:
+    type: entity
+    table: tr_cart_rule_product_rule
+    id:
+        idProductRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product_rule
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProductRuleGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product_rule_group
+        type:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+    lifecycleCallbacks: {  }

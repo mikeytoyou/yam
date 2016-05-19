@@ -1,0 +1,24 @@
+alex\yamBundle\Entity\TrWarehouseCarrier:
+    type: entity
+    table: tr_warehouse_carrier
+    indexes:
+        id_warehouse:
+            columns:
+                - id_warehouse
+        id_carrier:
+            columns:
+                - id_carrier
+    id:
+        idWarehouse:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_warehouse
+        idCarrier:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_carrier
+    lifecycleCallbacks: {  }

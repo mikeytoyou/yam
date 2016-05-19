@@ -1,0 +1,176 @@
+alex\yamBundle\Entity\TrCartRule:
+    type: entity
+    table: tr_cart_rule
+    id:
+        idCartRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cart_rule
+            generator:
+                strategy: IDENTITY
+    fields:
+        idCustomer:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_customer
+        dateFrom:
+            type: datetime
+            nullable: false
+            column: date_from
+        dateTo:
+            type: datetime
+            nullable: false
+            column: date_to
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        quantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+        quantityPerUser:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: quantity_per_user
+        priority:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+        partialUse:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: partial_use
+        code:
+            type: string
+            nullable: false
+            length: 254
+            fixed: false
+        minimumAmount:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 2
+            default: '0.00'
+            column: minimum_amount
+        minimumAmountTax:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: minimum_amount_tax
+        minimumAmountCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: minimum_amount_currency
+        minimumAmountShipping:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: minimum_amount_shipping
+        countryRestriction:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: country_restriction
+        carrierRestriction:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: carrier_restriction
+        groupRestriction:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: group_restriction
+        cartRuleRestriction:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: cart_rule_restriction
+        productRestriction:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: product_restriction
+        shopRestriction:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: shop_restriction
+        freeShipping:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: free_shipping
+        reductionPercent:
+            type: decimal
+            nullable: false
+            precision: 5
+            scale: 2
+            default: '0.00'
+            column: reduction_percent
+        reductionAmount:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 2
+            default: '0.00'
+            column: reduction_amount
+        reductionTax:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: reduction_tax
+        reductionCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: reduction_currency
+        reductionProduct:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '0'
+            column: reduction_product
+        giftProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: gift_product
+        giftProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: gift_product_attribute
+        highlight:
+            type: boolean
+            nullable: false
+            default: '0'
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: false
+            column: date_upd
+    lifecycleCallbacks: {  }

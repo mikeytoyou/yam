@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrAttributeLang:
+    type: entity
+    table: tr_attribute_lang
+    indexes:
+        id_lang:
+            columns:
+                - id_lang
+                - name
+    id:
+        idAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_attribute
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+    lifecycleCallbacks: {  }

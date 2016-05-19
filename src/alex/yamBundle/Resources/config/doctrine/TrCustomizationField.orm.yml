@@ -1,0 +1,29 @@
+alex\yamBundle\Entity\TrCustomizationField:
+    type: entity
+    table: tr_customization_field
+    indexes:
+        id_product:
+            columns:
+                - id_product
+    id:
+        idCustomizationField:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_customization_field
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product
+        type:
+            type: boolean
+            nullable: false
+        required:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

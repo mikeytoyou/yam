@@ -1,0 +1,30 @@
+alex\yamBundle\Entity\TrLayeredIndexableFeatureValueLangValue:
+    type: entity
+    table: tr_layered_indexable_feature_value_lang_value
+    id:
+        idFeatureValue:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_feature_value
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_lang
+    fields:
+        urlName:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            column: url_name
+        metaTitle:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            column: meta_title
+    lifecycleCallbacks: {  }

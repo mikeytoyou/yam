@@ -1,0 +1,59 @@
+alex\yamBundle\Entity\TrLugarVuelo:
+    type: entity
+    table: tr_lugar_vuelo
+    id:
+        idLugares:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_lugares
+            generator:
+                strategy: IDENTITY
+    fields:
+        idDetalleCoti:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_detalle_coti
+        fechaVuelo:
+            type: string
+            nullable: true
+            length: 12
+            fixed: false
+            column: fecha_vuelo
+        numVuelo:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            column: num_vuelo
+        lPartida:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: l_partida
+        lLlegada:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: l_llegada
+        hSalida:
+            type: time
+            nullable: true
+            column: h_salida
+        hLlegada:
+            type: time
+            nullable: true
+            column: h_llegada
+        dateAdd:
+            type: datetime
+            nullable: true
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: true
+            column: date_upd
+    lifecycleCallbacks: {  }

@@ -1,0 +1,63 @@
+alex\yamBundle\Entity\TrDelivery:
+    type: entity
+    table: tr_delivery
+    indexes:
+        id_zone:
+            columns:
+                - id_zone
+        id_carrier:
+            columns:
+                - id_carrier
+                - id_zone
+        id_range_price:
+            columns:
+                - id_range_price
+        id_range_weight:
+            columns:
+                - id_range_weight
+    id:
+        idDelivery:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_delivery
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShop:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_shop
+        idShopGroup:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_shop_group
+        idCarrier:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_carrier
+        idRangePrice:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_range_price
+        idRangeWeight:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_range_weight
+        idZone:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_zone
+        price:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+    lifecycleCallbacks: {  }

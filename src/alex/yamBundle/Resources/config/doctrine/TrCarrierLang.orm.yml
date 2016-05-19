@@ -1,0 +1,30 @@
+alex\yamBundle\Entity\TrCarrierLang:
+    type: entity
+    table: tr_carrier_lang
+    id:
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            id: true
+            column: id_shop
+        idCarrier:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_carrier
+    fields:
+        delay:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,227 @@
+alex\yamBundle\Entity\TrCustomer:
+    type: entity
+    table: tr_customer
+    indexes:
+        customer_email:
+            columns:
+                - email
+        customer_login:
+            columns:
+                - email
+                - passwd
+        id_customer_passwd:
+            columns:
+                - id_customer
+                - passwd
+        id_gender:
+            columns:
+                - id_gender
+        id_shop_group:
+            columns:
+                - id_shop_group
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idCustomer:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_customer
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShopGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop_group
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop
+        idGender:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_gender
+        idDefaultGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_default_group
+        idLang:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_lang
+        idRisk:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_risk
+        company:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+        siret:
+            type: string
+            nullable: true
+            length: 14
+            fixed: false
+        ape:
+            type: string
+            nullable: true
+            length: 5
+            fixed: false
+        firstname:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        lastname:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+        passwd:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        lastPasswdGen:
+            type: datetime
+            nullable: false
+            default: CURRENT_TIMESTAMP
+            column: last_passwd_gen
+        birthday:
+            type: date
+            nullable: true
+        newsletter:
+            type: boolean
+            nullable: false
+            default: '0'
+        ipRegistrationNewsletter:
+            type: string
+            nullable: true
+            length: 15
+            fixed: false
+            column: ip_registration_newsletter
+        newsletterDateAdd:
+            type: datetime
+            nullable: true
+            column: newsletter_date_add
+        optin:
+            type: boolean
+            nullable: false
+            default: '0'
+        website:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+        outstandingAllowAmount:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: outstanding_allow_amount
+        showPublicPrices:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: show_public_prices
+        maxPaymentDays:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '60'
+            column: max_payment_days
+        secureKey:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            default: '-1'
+            column: secure_key
+        note:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        active:
+            type: boolean
+            nullable: false
+            default: '1'
+        isGuest:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: is_guest
+        deleted:
+            type: boolean
+            nullable: false
+            default: '0'
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: false
+            column: date_upd
+        secondname:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+        thirdname:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+        cellphone:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+        phone:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+        idDocument:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_document
+        numDocument:
+            type: string
+            nullable: true
+            length: 15
+            fixed: false
+            column: num_document
+        idSupplier:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_supplier
+        idPadre:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_padre
+    lifecycleCallbacks: {  }

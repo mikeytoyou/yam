@@ -1,0 +1,24 @@
+alex\yamBundle\Entity\TrQuickAccess:
+    type: entity
+    table: tr_quick_access
+    id:
+        idQuickAccess:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_quick_access
+            generator:
+                strategy: IDENTITY
+    fields:
+        newWindow:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: new_window
+        link:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+    lifecycleCallbacks: {  }

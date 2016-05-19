@@ -1,0 +1,113 @@
+alex\yamBundle\Entity\TrSpecificPrice:
+    type: entity
+    table: tr_specific_price
+    indexes:
+        id_product:
+            columns:
+                - id_product
+                - id_shop
+                - id_currency
+                - id_country
+                - id_group
+                - id_customer
+                - from_quantity
+                - from
+                - to
+        from_quantity:
+            columns:
+                - from_quantity
+        id_specific_price_rule:
+            columns:
+                - id_specific_price_rule
+        id_cart:
+            columns:
+                - id_cart
+    id:
+        idSpecificPrice:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_specific_price
+            generator:
+                strategy: IDENTITY
+    fields:
+        idSpecificPriceRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_specific_price_rule
+        idCart:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_cart
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop
+        idShopGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_shop_group
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_currency
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_country
+        idGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_group
+        idCustomer:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_customer
+        idProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product_attribute
+        price:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+        fromQuantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: from_quantity
+        reduction:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+        reductionType:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            column: reduction_type
+        from:
+            type: datetime
+            nullable: false
+        to:
+            type: datetime
+            nullable: false
+    lifecycleCallbacks: {  }

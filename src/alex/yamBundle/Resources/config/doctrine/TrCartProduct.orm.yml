@@ -1,0 +1,53 @@
+alex\yamBundle\Entity\TrCartProduct:
+    type: entity
+    table: tr_cart_product
+    indexes:
+        cart_product_index:
+            columns:
+                - id_cart
+                - id_product
+        id_product_attribute:
+            columns:
+                - id_product_attribute
+    id:
+        idCart:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cart
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product
+        idAddressDelivery:
+            type: integer
+            nullable: true
+            unsigned: true
+            default: '0'
+            column: id_address_delivery
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop
+        idProductAttribute:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_product_attribute
+        quantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+    lifecycleCallbacks: {  }

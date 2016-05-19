@@ -1,0 +1,23 @@
+alexyam_estancia:
+    resource: "@alexyamBundle/Resources/config/routing/estancia.yml"
+    prefix:   /estancia
+
+alexyam_homepage:
+    path:     /
+    defaults: { _controller: alexyamBundle:Default:index }
+    
+alexyam_hotel:
+        resource: "@alexyamBundle/Resources/config/routing/hotel.yml"
+        prefix:   /hotel
+alexyam_paquete:
+        resource: "@alexyamBundle/Resources/config/routing/paquete.yml"
+        prefix:   /paquete
+alexyam_paqueteporcliente:
+        resource: "@alexyamBundle/Resources/config/routing/paqueteporcliente.yml"
+        prefix:   /paqueteporcliente
+alexyam_ruta:
+        resource: "@alexyamBundle/Resources/config/routing/ruta.yml"
+        prefix:   /ruta
+alexyam_incluye:
+        resource: "@alexyamBundle/Resources/config/routing/incluye.yml"
+        prefix:   /incluye

@@ -1,0 +1,40 @@
+alex\yamBundle\Entity\TrWarehouseProductLocation:
+    type: entity
+    table: tr_warehouse_product_location
+    uniqueConstraints:
+        id_product:
+            columns:
+                - id_product
+                - id_product_attribute
+                - id_warehouse
+    id:
+        idWarehouseProductLocation:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_warehouse_product_location
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product
+        idProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product_attribute
+        idWarehouse:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_warehouse
+        location:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+    lifecycleCallbacks: {  }

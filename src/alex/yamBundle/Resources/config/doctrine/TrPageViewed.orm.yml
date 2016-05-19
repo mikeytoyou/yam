@@ -1,0 +1,35 @@
+alex\yamBundle\Entity\TrPageViewed:
+    type: entity
+    table: tr_page_viewed
+    id:
+        idPage:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_page
+        idDateRange:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_date_range
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            id: true
+            column: id_shop
+    fields:
+        idShopGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop_group
+        counter:
+            type: integer
+            nullable: false
+            unsigned: true
+    lifecycleCallbacks: {  }

@@ -1,0 +1,26 @@
+alex\yamBundle\Entity\TrTipodocumento:
+    type: entity
+    table: tr_tipodocumento
+    id:
+        idTipodocumento:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_TipoDocumento
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            column: Nombre
+        descripcion:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: Descripcion
+    lifecycleCallbacks: {  }

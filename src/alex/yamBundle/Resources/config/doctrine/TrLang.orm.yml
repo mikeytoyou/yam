@@ -1,0 +1,58 @@
+alex\yamBundle\Entity\TrLang:
+    type: entity
+    table: tr_lang
+    indexes:
+        lang_iso_code:
+            columns:
+                - iso_code
+    id:
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+        isoCode:
+            type: string
+            nullable: false
+            length: 2
+            fixed: true
+            column: iso_code
+        languageCode:
+            type: string
+            nullable: false
+            length: 5
+            fixed: true
+            column: language_code
+        dateFormatLite:
+            type: string
+            nullable: false
+            length: 32
+            fixed: true
+            default: Y-m-d
+            column: date_format_lite
+        dateFormatFull:
+            type: string
+            nullable: false
+            length: 32
+            fixed: true
+            default: 'Y-m-d H:i:s'
+            column: date_format_full
+        isRtl:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: is_rtl
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+alex\yamBundle\Entity\TrLayeredIndexableAttributeLangValue:
+    type: entity
+    table: tr_layered_indexable_attribute_lang_value
+    id:
+        idAttribute:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_attribute
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_lang
+    fields:
+        urlName:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            column: url_name
+        metaTitle:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            column: meta_title
+    lifecycleCallbacks: {  }

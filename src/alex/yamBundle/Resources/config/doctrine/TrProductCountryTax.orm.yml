@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrProductCountryTax:
+    type: entity
+    table: tr_product_country_tax
+    id:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_product
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_country
+    fields:
+        idTax:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_tax
+    lifecycleCallbacks: {  }

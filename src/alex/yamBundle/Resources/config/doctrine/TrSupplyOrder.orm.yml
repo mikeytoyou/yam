@@ -1,0 +1,124 @@
+alex\yamBundle\Entity\TrSupplyOrder:
+    type: entity
+    table: tr_supply_order
+    indexes:
+        id_supplier:
+            columns:
+                - id_supplier
+        id_warehouse:
+            columns:
+                - id_warehouse
+        reference:
+            columns:
+                - reference
+    id:
+        idSupplyOrder:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_supply_order
+            generator:
+                strategy: IDENTITY
+    fields:
+        idSupplier:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_supplier
+        supplierName:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            column: supplier_name
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_lang
+        idWarehouse:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_warehouse
+        idSupplyOrderState:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_supply_order_state
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_currency
+        idRefCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_ref_currency
+        reference:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: false
+            column: date_upd
+        dateDeliveryExpected:
+            type: datetime
+            nullable: true
+            column: date_delivery_expected
+        totalTe:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: total_te
+        totalWithDiscountTe:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: total_with_discount_te
+        totalTax:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: total_tax
+        totalTi:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: total_ti
+        discountRate:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: discount_rate
+        discountValueTe:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: discount_value_te
+        isTemplate:
+            type: boolean
+            nullable: true
+            default: '0'
+            column: is_template
+    lifecycleCallbacks: {  }

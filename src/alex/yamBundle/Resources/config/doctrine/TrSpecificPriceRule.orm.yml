@@ -1,0 +1,77 @@
+alex\yamBundle\Entity\TrSpecificPriceRule:
+    type: entity
+    table: tr_specific_price_rule
+    indexes:
+        id_product:
+            columns:
+                - id_shop
+                - id_currency
+                - id_country
+                - id_group
+                - from_quantity
+                - from
+                - to
+    id:
+        idSpecificPriceRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_specific_price_rule
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_currency
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_country
+        idGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_group
+        fromQuantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: from_quantity
+        price:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+        reduction:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+        reductionType:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            column: reduction_type
+        from:
+            type: datetime
+            nullable: false
+        to:
+            type: datetime
+            nullable: false
+    lifecycleCallbacks: {  }

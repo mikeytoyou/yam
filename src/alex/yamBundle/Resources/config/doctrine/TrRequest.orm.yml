@@ -1,0 +1,31 @@
+alex\yamBundle\Entity\TrRequest:
+    type: entity
+    table: tr_request
+    id:
+        llave1:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        titulo:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        descripcion:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+        dateAdd:
+            type: datetime
+            nullable: true
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: true
+            column: date_upd
+    lifecycleCallbacks: {  }

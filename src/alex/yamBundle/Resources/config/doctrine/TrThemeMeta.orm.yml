@@ -1,0 +1,46 @@
+alex\yamBundle\Entity\TrThemeMeta:
+    type: entity
+    table: tr_theme_meta
+    indexes:
+        id_theme:
+            columns:
+                - id_theme
+        id_meta:
+            columns:
+                - id_meta
+    uniqueConstraints:
+        id_theme_2:
+            columns:
+                - id_theme
+                - id_meta
+    id:
+        idThemeMeta:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_theme_meta
+            generator:
+                strategy: IDENTITY
+    fields:
+        idTheme:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_theme
+        idMeta:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_meta
+        leftColumn:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: left_column
+        rightColumn:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: right_column
+    lifecycleCallbacks: {  }

@@ -1,0 +1,35 @@
+alex\yamBundle\Entity\TrTabModulePreference:
+    type: entity
+    table: tr_tab_module_preference
+    uniqueConstraints:
+        employee_module:
+            columns:
+                - id_employee
+                - id_tab
+                - module
+    id:
+        idTabModulePreference:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_tab_module_preference
+            generator:
+                strategy: IDENTITY
+    fields:
+        idEmployee:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_employee
+        idTab:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_tab
+        module:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+    lifecycleCallbacks: {  }

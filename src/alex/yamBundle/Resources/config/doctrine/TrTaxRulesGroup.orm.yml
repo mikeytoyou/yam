@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrTaxRulesGroup:
+    type: entity
+    table: tr_tax_rules_group
+    id:
+        idTaxRulesGroup:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_tax_rules_group
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+        active:
+            type: integer
+            nullable: false
+            unsigned: false
+    lifecycleCallbacks: {  }

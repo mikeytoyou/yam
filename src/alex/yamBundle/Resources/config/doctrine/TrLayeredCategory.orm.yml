@@ -1,0 +1,56 @@
+alex\yamBundle\Entity\TrLayeredCategory:
+    type: entity
+    table: tr_layered_category
+    indexes:
+        id_category:
+            columns:
+                - id_category
+                - type
+    id:
+        idLayeredCategory:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_layered_category
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_shop
+        idCategory:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_category
+        idValue:
+            type: integer
+            nullable: true
+            unsigned: true
+            default: '0'
+            column: id_value
+        type:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+        position:
+            type: integer
+            nullable: false
+            unsigned: true
+        filterType:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: filter_type
+        filterShowLimit:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: filter_show_limit
+    lifecycleCallbacks: {  }

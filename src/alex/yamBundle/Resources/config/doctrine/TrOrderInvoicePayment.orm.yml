@@ -1,0 +1,30 @@
+alex\yamBundle\Entity\TrOrderInvoicePayment:
+    type: entity
+    table: tr_order_invoice_payment
+    indexes:
+        order_payment:
+            columns:
+                - id_order_payment
+        id_order:
+            columns:
+                - id_order
+    id:
+        idOrderInvoice:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_invoice
+        idOrderPayment:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_payment
+    fields:
+        idOrder:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_order
+    lifecycleCallbacks: {  }

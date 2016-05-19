@@ -1,0 +1,19 @@
+alex\yamBundle\Entity\TrOrderReturnState:
+    type: entity
+    table: tr_order_return_state
+    id:
+        idOrderReturnState:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_return_state
+            generator:
+                strategy: IDENTITY
+    fields:
+        color:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+    lifecycleCallbacks: {  }

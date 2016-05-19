@@ -1,0 +1,4 @@
+services:
+#    alexyam.example:
+#        class: alex\yamBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

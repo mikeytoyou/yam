@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrZone:
+    type: entity
+    table: tr_zone
+    id:
+        idZone:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_zone
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

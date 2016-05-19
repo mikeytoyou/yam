@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrCurrencyShop:
+    type: entity
+    table: tr_currency_shop
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_currency
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    fields:
+        conversionRate:
+            type: decimal
+            nullable: false
+            precision: 13
+            scale: 6
+            column: conversion_rate
+    lifecycleCallbacks: {  }

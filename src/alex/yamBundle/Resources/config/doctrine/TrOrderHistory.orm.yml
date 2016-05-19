@@ -1,0 +1,43 @@
+alex\yamBundle\Entity\TrOrderHistory:
+    type: entity
+    table: tr_order_history
+    indexes:
+        order_history_order:
+            columns:
+                - id_order
+        id_employee:
+            columns:
+                - id_employee
+        id_order_state:
+            columns:
+                - id_order_state
+    id:
+        idOrderHistory:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_history
+            generator:
+                strategy: IDENTITY
+    fields:
+        idEmployee:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_employee
+        idOrder:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_order
+        idOrderState:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_order_state
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+    lifecycleCallbacks: {  }

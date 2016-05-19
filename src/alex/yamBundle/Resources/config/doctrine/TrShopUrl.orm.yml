@@ -1,0 +1,63 @@
+alex\yamBundle\Entity\TrShopUrl:
+    type: entity
+    table: tr_shop_url
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+    uniqueConstraints:
+        full_shop_url:
+            columns:
+                - domain
+                - physical_uri
+                - virtual_uri
+        full_shop_url_ssl:
+            columns:
+                - domain_ssl
+                - physical_uri
+                - virtual_uri
+    id:
+        idShopUrl:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop_url
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_shop
+        domain:
+            type: string
+            nullable: false
+            length: 150
+            fixed: false
+        domainSsl:
+            type: string
+            nullable: false
+            length: 150
+            fixed: false
+            column: domain_ssl
+        physicalUri:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            column: physical_uri
+        virtualUri:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            column: virtual_uri
+        main:
+            type: boolean
+            nullable: false
+        active:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

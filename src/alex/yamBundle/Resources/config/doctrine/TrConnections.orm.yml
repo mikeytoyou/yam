@@ -1,0 +1,61 @@
+alex\yamBundle\Entity\TrConnections:
+    type: entity
+    table: tr_connections
+    indexes:
+        id_guest:
+            columns:
+                - id_guest
+        date_add:
+            columns:
+                - date_add
+        id_page:
+            columns:
+                - id_page
+    id:
+        idConnections:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_connections
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShopGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop_group
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop
+        idGuest:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_guest
+        idPage:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_page
+        ipAddress:
+            type: bigint
+            nullable: true
+            unsigned: false
+            column: ip_address
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+        httpReferer:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: http_referer
+    lifecycleCallbacks: {  }

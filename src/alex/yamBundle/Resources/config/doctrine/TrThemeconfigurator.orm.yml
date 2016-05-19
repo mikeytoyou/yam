@@ -1,0 +1,79 @@
+alex\yamBundle\Entity\TrThemeconfigurator:
+    type: entity
+    table: tr_themeconfigurator
+    id:
+        idItem:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_item
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_shop
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_lang
+        itemOrder:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: item_order
+        title:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+        titleUse:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: title_use
+        hook:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+        url:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        target:
+            type: boolean
+            nullable: false
+            default: '0'
+        image:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+        imageW:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            column: image_w
+        imageH:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            column: image_h
+        html:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        active:
+            type: boolean
+            nullable: false
+            default: '1'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,34 @@
+alex\yamBundle\Entity\Paquete:
+    type: entity
+    table: paquete
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idCustomer:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_customer
+        fechCreada:
+            type: date
+            nullable: true
+            column: fech_creada
+        duracion:
+            type: string
+            nullable: true
+            length: 35
+            fixed: false
+    oneToMany:
+       duraciones:
+         targetEntity: duracion
+         mappedBy: Paquete
+       rutas:
+         targetEntity: Ruta
+         mappedBy: Paquete
+    lifecycleCallbacks: {  }

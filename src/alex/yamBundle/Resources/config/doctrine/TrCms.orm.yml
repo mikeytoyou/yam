@@ -1,0 +1,32 @@
+alex\yamBundle\Entity\TrCms:
+    type: entity
+    table: tr_cms
+    id:
+        idCms:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cms
+            generator:
+                strategy: IDENTITY
+    fields:
+        idCmsCategory:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_cms_category
+        position:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+        indexation:
+            type: boolean
+            nullable: false
+            default: '1'
+    lifecycleCallbacks: {  }

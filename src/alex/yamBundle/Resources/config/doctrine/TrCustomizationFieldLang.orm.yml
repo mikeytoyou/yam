@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrCustomizationFieldLang:
+    type: entity
+    table: tr_customization_field_lang
+    id:
+        idCustomizationField:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_customization_field
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+    lifecycleCallbacks: {  }

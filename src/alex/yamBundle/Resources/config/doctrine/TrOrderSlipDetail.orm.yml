@@ -1,0 +1,36 @@
+alex\yamBundle\Entity\TrOrderSlipDetail:
+    type: entity
+    table: tr_order_slip_detail
+    id:
+        idOrderSlip:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_slip
+        idOrderDetail:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_detail
+    fields:
+        productQuantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: product_quantity
+        amountTaxExcl:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 2
+            column: amount_tax_excl
+        amountTaxIncl:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 2
+            column: amount_tax_incl
+    lifecycleCallbacks: {  }

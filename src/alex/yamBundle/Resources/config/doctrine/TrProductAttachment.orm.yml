@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrProductAttachment:
+    type: entity
+    table: tr_product_attachment
+    id:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+        idAttachment:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_attachment
+    lifecycleCallbacks: {  }

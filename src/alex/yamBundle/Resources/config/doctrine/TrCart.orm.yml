@@ -1,0 +1,134 @@
+alex\yamBundle\Entity\TrCart:
+    type: entity
+    table: tr_cart
+    indexes:
+        cart_customer:
+            columns:
+                - id_customer
+        id_address_delivery:
+            columns:
+                - id_address_delivery
+        id_address_invoice:
+            columns:
+                - id_address_invoice
+        id_carrier:
+            columns:
+                - id_carrier
+        id_lang:
+            columns:
+                - id_lang
+        id_currency:
+            columns:
+                - id_currency
+        id_guest:
+            columns:
+                - id_guest
+        id_shop_group:
+            columns:
+                - id_shop_group
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idCart:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cart
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShopGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop_group
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop
+        idCarrier:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_carrier
+        deliveryOption:
+            type: text
+            nullable: false
+            length: 65535
+            fixed: false
+            column: delivery_option
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_lang
+        idAddressDelivery:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_address_delivery
+        idAddressInvoice:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_address_invoice
+        idCurrency:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_currency
+        idCustomer:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_customer
+        idGuest:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_guest
+        secureKey:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            default: '-1'
+            column: secure_key
+        recyclable:
+            type: boolean
+            nullable: false
+            default: '1'
+        gift:
+            type: boolean
+            nullable: false
+            default: '0'
+        giftMessage:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+            column: gift_message
+        mobileTheme:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: mobile_theme
+        allowSeperatedPackage:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: allow_seperated_package
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: false
+            column: date_upd
+    lifecycleCallbacks: {  }

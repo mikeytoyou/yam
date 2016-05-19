@@ -1,0 +1,166 @@
+alex\yamBundle\Entity\TrEmployee:
+    type: entity
+    table: tr_employee
+    indexes:
+        employee_login:
+            columns:
+                - email
+                - passwd
+        id_employee_passwd:
+            columns:
+                - id_employee
+                - passwd
+        id_profile:
+            columns:
+                - id_profile
+    id:
+        idEmployee:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_employee
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProfile:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_profile
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_lang
+        lastname:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        firstname:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+        passwd:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        lastPasswdGen:
+            type: datetime
+            nullable: false
+            default: CURRENT_TIMESTAMP
+            column: last_passwd_gen
+        statsDateFrom:
+            type: date
+            nullable: true
+            column: stats_date_from
+        statsDateTo:
+            type: date
+            nullable: true
+            column: stats_date_to
+        statsCompareFrom:
+            type: date
+            nullable: true
+            column: stats_compare_from
+        statsCompareTo:
+            type: date
+            nullable: true
+            column: stats_compare_to
+        statsCompareOption:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: stats_compare_option
+        preselectDateRange:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            column: preselect_date_range
+        boColor:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            column: bo_color
+        boTheme:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            column: bo_theme
+        boCss:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+            column: bo_css
+        defaultTab:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: default_tab
+        boWidth:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: bo_width
+        boMenu:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: bo_menu
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+        optin:
+            type: boolean
+            nullable: false
+            default: '1'
+        idLastOrder:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_last_order
+        idLastCustomerMessage:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_last_customer_message
+        idLastCustomer:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_last_customer
+        employeeTaxe:
+            type: boolean
+            nullable: true
+            default: '1'
+            column: employee_taxe
+        boMenuVentas:
+            type: boolean
+            nullable: true
+            default: '1'
+            column: bo_menu_ventas
+        supervisa:
+            type: integer
+            nullable: true
+            unsigned: false
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,55 @@
+alex\yamBundle\Entity\TrState:
+    type: entity
+    table: tr_state
+    indexes:
+        id_country:
+            columns:
+                - id_country
+        name:
+            columns:
+                - name
+        id_zone:
+            columns:
+                - id_zone
+    id:
+        idState:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_state
+            generator:
+                strategy: IDENTITY
+    fields:
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_country
+        idZone:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_zone
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        isoCode:
+            type: string
+            nullable: false
+            length: 7
+            fixed: false
+            column: iso_code
+        taxBehavior:
+            type: smallint
+            nullable: false
+            unsigned: false
+            default: '0'
+            column: tax_behavior
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

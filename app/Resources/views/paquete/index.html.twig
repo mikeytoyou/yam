@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Paquete list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idcustomer</th>
+                <th>Fechcreada</th>
+                <th>Duracion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for paquete in paquetes %}
+            <tr>
+                <td><a href="{{ path('paquete_show', { 'id': paquete.id }) }}">{{ paquete.id }}</a></td>
+                <td>{{ paquete.idCustomer }}</td>
+                <td>{% if paquete.fechCreada %}{{ paquete.fechCreada|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ paquete.duracion }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('paquete_show', { 'id': paquete.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('paquete_edit', { 'id': paquete.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('paquete_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

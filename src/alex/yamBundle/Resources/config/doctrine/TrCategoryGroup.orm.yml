@@ -1,0 +1,24 @@
+alex\yamBundle\Entity\TrCategoryGroup:
+    type: entity
+    table: tr_category_group
+    indexes:
+        id_category:
+            columns:
+                - id_category
+        id_group:
+            columns:
+                - id_group
+    id:
+        idCategory:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_category
+        idGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_group
+    lifecycleCallbacks: {  }

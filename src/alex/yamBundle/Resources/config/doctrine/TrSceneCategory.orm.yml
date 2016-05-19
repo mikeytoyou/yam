@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrSceneCategory:
+    type: entity
+    table: tr_scene_category
+    id:
+        idScene:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_scene
+        idCategory:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_category
+    lifecycleCallbacks: {  }

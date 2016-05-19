@@ -1,0 +1,24 @@
+alex\yamBundle\Entity\TrSearchEngine:
+    type: entity
+    table: tr_search_engine
+    id:
+        idSearchEngine:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_search_engine
+            generator:
+                strategy: IDENTITY
+    fields:
+        server:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        getvar:
+            type: string
+            nullable: false
+            length: 16
+            fixed: false
+    lifecycleCallbacks: {  }

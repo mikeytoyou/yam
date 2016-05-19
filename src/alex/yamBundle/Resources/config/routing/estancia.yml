@@ -1,0 +1,24 @@
+estancia_index:
+    path:     /
+    defaults: { _controller: "alexyamBundle:Estancia:index" }
+    methods:  GET
+
+estancia_show:
+    path:     /{id}/show
+    defaults: { _controller: "alexyamBundle:Estancia:show" }
+    methods:  GET
+
+estancia_new:
+    path:     /new
+    defaults: { _controller: "alexyamBundle:Estancia:new" }
+    methods:  [GET, POST]
+
+estancia_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "alexyamBundle:Estancia:edit" }
+    methods:  [GET, POST]
+
+estancia_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "alexyamBundle:Estancia:delete" }
+    methods:  DELETE

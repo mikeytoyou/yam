@@ -1,0 +1,24 @@
+alex\yamBundle\Entity\TrWarehouseShop:
+    type: entity
+    table: tr_warehouse_shop
+    indexes:
+        id_warehouse:
+            columns:
+                - id_warehouse
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idWarehouse:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_warehouse
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

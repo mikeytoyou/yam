@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrCartRuleLang:
+    type: entity
+    table: tr_cart_rule_lang
+    id:
+        idCartRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cart_rule
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 254
+            fixed: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,60 @@
+alex\yamBundle\Entity\TrOrderCartRule:
+    type: entity
+    table: tr_order_cart_rule
+    indexes:
+        id_order:
+            columns:
+                - id_order
+        id_cart_rule:
+            columns:
+                - id_cart_rule
+    id:
+        idOrderCartRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_cart_rule
+            generator:
+                strategy: IDENTITY
+    fields:
+        idOrder:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_order
+        idCartRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_cart_rule
+        idOrderInvoice:
+            type: integer
+            nullable: true
+            unsigned: true
+            default: '0'
+            column: id_order_invoice
+        name:
+            type: string
+            nullable: false
+            length: 254
+            fixed: false
+        value:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 2
+            default: '0.00'
+        valueTaxExcl:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 2
+            default: '0.00'
+            column: value_tax_excl
+        freeShipping:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: free_shipping
+    lifecycleCallbacks: {  }

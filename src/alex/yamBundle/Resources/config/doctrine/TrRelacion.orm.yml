@@ -1,0 +1,18 @@
+alex\yamBundle\Entity\TrRelacion:
+    type: entity
+    table: tr_relacion
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idAnterior:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_anterior
+    lifecycleCallbacks: {  }

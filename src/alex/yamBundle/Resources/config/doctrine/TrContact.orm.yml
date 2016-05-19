@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrContact:
+    type: entity
+    table: tr_contact
+    id:
+        idContact:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_contact
+            generator:
+                strategy: IDENTITY
+    fields:
+        email:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+        customerService:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: customer_service
+        position:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

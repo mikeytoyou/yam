@@ -1,0 +1,24 @@
+paqueteporcliente_index:
+    path:     /
+    defaults: { _controller: "alexyamBundle:Paqueteporcliente:index" }
+    methods:  GET
+
+paqueteporcliente_show:
+    path:     /{id}/show
+    defaults: { _controller: "alexyamBundle:Paqueteporcliente:show" }
+    methods:  GET
+
+paqueteporcliente_new:
+    path:     /new
+    defaults: { _controller: "alexyamBundle:Paqueteporcliente:new" }
+    methods:  [GET, POST]
+
+paqueteporcliente_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "alexyamBundle:Paqueteporcliente:edit" }
+    methods:  [GET, POST]
+
+paqueteporcliente_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "alexyamBundle:Paqueteporcliente:delete" }
+    methods:  DELETE

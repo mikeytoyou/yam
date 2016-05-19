@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\duracion:
+    type: entity
+    table: duracion
+    repositoryClass: alex\yamBundle\Repository\duracionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        numerodedias:
+            type: integer
+        numerodenoches:
+            type: integer
+        fechainicio:
+            type: date
+        fechafin:
+            type: date
+    manyToOne:
+        paquete:
+            targetEntity: Paquete
+            inversedBy: duraciones
+            joinColumn:
+                name: paquete_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

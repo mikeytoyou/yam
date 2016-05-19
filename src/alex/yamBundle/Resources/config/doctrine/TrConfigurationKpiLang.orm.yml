@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrConfigurationKpiLang:
+    type: entity
+    table: tr_configuration_kpi_lang
+    id:
+        idConfigurationKpi:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_configuration_kpi
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        value:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        dateUpd:
+            type: datetime
+            nullable: true
+            column: date_upd
+    lifecycleCallbacks: {  }

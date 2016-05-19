@@ -1,0 +1,26 @@
+alex\yamBundle\Entity\TrCustomizedData:
+    type: entity
+    table: tr_customized_data
+    id:
+        idCustomization:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_customization
+        type:
+            type: boolean
+            nullable: false
+            id: true
+        index:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+    fields:
+        value:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+    lifecycleCallbacks: {  }

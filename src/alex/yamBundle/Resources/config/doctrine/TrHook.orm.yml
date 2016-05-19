@@ -1,0 +1,42 @@
+alex\yamBundle\Entity\TrHook:
+    type: entity
+    table: tr_hook
+    uniqueConstraints:
+        hook_name:
+            columns:
+                - name
+    id:
+        idHook:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_hook
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        title:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        position:
+            type: boolean
+            nullable: false
+            default: '1'
+        liveEdit:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: live_edit
+    lifecycleCallbacks: {  }

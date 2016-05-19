@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrAttachmentLang:
+    type: entity
+    table: tr_attachment_lang
+    id:
+        idAttachment:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_attachment
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+    lifecycleCallbacks: {  }

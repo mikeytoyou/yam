@@ -1,0 +1,128 @@
+alex\yamBundle\Entity\TrCarrier:
+    type: entity
+    table: tr_carrier
+    indexes:
+        deleted:
+            columns:
+                - deleted
+                - active
+        id_tax_rules_group:
+            columns:
+                - id_tax_rules_group
+    id:
+        idCarrier:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_carrier
+            generator:
+                strategy: IDENTITY
+    fields:
+        idReference:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_reference
+        idTaxRulesGroup:
+            type: integer
+            nullable: true
+            unsigned: true
+            default: '0'
+            column: id_tax_rules_group
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        url:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+        deleted:
+            type: boolean
+            nullable: false
+            default: '0'
+        shippingHandling:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: shipping_handling
+        rangeBehavior:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: range_behavior
+        isModule:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: is_module
+        isFree:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: is_free
+        shippingExternal:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: shipping_external
+        needRange:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: need_range
+        externalModuleName:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+            column: external_module_name
+        shippingMethod:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '0'
+            column: shipping_method
+        position:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+        maxWidth:
+            type: integer
+            nullable: true
+            unsigned: false
+            default: '0'
+            column: max_width
+        maxHeight:
+            type: integer
+            nullable: true
+            unsigned: false
+            default: '0'
+            column: max_height
+        maxDepth:
+            type: integer
+            nullable: true
+            unsigned: false
+            default: '0'
+            column: max_depth
+        maxWeight:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: max_weight
+        grade:
+            type: integer
+            nullable: true
+            unsigned: false
+            default: '0'
+    lifecycleCallbacks: {  }

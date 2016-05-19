@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrTax:
+    type: entity
+    table: tr_tax
+    id:
+        idTax:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_tax
+            generator:
+                strategy: IDENTITY
+    fields:
+        rate:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 3
+        active:
+            type: boolean
+            nullable: false
+            default: '1'
+        deleted:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

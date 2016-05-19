@@ -1,0 +1,24 @@
+alex\yamBundle\Entity\TrRequestSql:
+    type: entity
+    table: tr_request_sql
+    id:
+        idRequestSql:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_request_sql
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+        sql:
+            type: text
+            nullable: false
+            length: 65535
+            fixed: false
+    lifecycleCallbacks: {  }

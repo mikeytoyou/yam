@@ -1,0 +1,74 @@
+alex\yamBundle\Entity\TrCountry:
+    type: entity
+    table: tr_country
+    indexes:
+        country_iso_code:
+            columns:
+                - iso_code
+        country_:
+            columns:
+                - id_zone
+    id:
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_country
+            generator:
+                strategy: IDENTITY
+    fields:
+        idZone:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_zone
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_currency
+        isoCode:
+            type: string
+            nullable: false
+            length: 3
+            fixed: false
+            column: iso_code
+        callPrefix:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '0'
+            column: call_prefix
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+        containsStates:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: contains_states
+        needIdentificationNumber:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: need_identification_number
+        needZipCode:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: need_zip_code
+        zipCodeFormat:
+            type: string
+            nullable: false
+            length: 12
+            fixed: false
+            default: ''
+            column: zip_code_format
+        displayTaxLabel:
+            type: boolean
+            nullable: false
+            column: display_tax_label
+    lifecycleCallbacks: {  }

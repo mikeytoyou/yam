@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrRiskLang:
+    type: entity
+    table: tr_risk_lang
+    indexes:
+        id_risk:
+            columns:
+                - id_risk
+    id:
+        idRisk:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_risk
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+    lifecycleCallbacks: {  }

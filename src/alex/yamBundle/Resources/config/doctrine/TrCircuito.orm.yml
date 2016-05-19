@@ -1,0 +1,61 @@
+alex\yamBundle\Entity\TrCircuito:
+    type: entity
+    table: tr_circuito
+    uniqueConstraints:
+        id_circuito:
+            columns:
+                - id_circuito
+    id:
+        idCircuito:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_circuito
+        idEmployee:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_employee
+        idDepartamento:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_departamento
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 35
+            fixed: false
+        descripcionCorta:
+            type: string
+            nullable: false
+            length: 60
+            fixed: false
+            column: descripcion_corta
+        descripcionDetallada:
+            type: text
+            nullable: false
+            length: 65535
+            fixed: false
+            column: descripcion_detallada
+        active:
+            type: boolean
+            nullable: false
+        recorrido:
+            type: string
+            nullable: false
+            length: 80
+            fixed: false
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: false
+            column: date_upd
+    lifecycleCallbacks: {  }

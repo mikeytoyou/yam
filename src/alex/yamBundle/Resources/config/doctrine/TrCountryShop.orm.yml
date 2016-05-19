@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrCountryShop:
+    type: entity
+    table: tr_country_shop
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_country
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

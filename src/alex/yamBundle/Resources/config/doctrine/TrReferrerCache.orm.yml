@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrReferrerCache:
+    type: entity
+    table: tr_referrer_cache
+    id:
+        idConnectionsSource:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_connections_source
+        idReferrer:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_referrer
+    lifecycleCallbacks: {  }

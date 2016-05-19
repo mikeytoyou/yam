@@ -1,0 +1,50 @@
+alex\yamBundle\Entity\TrTab:
+    type: entity
+    table: tr_tab
+    indexes:
+        class_name:
+            columns:
+                - class_name
+        id_parent:
+            columns:
+                - id_parent
+    id:
+        idTab:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_tab
+            generator:
+                strategy: IDENTITY
+    fields:
+        idParent:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_parent
+        className:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            column: class_name
+        module:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+        position:
+            type: integer
+            nullable: false
+            unsigned: true
+        active:
+            type: boolean
+            nullable: false
+            default: '1'
+        hideHostMode:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: hide_host_mode
+    lifecycleCallbacks: {  }

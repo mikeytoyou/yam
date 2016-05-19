@@ -1,0 +1,71 @@
+alex\yamBundle\Entity\TrStock:
+    type: entity
+    table: tr_stock
+    indexes:
+        id_warehouse:
+            columns:
+                - id_warehouse
+        id_product:
+            columns:
+                - id_product
+        id_product_attribute:
+            columns:
+                - id_product_attribute
+    id:
+        idStock:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_stock
+            generator:
+                strategy: IDENTITY
+    fields:
+        idWarehouse:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_warehouse
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product
+        idProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product_attribute
+        reference:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        ean13:
+            type: string
+            nullable: true
+            length: 13
+            fixed: false
+        upc:
+            type: string
+            nullable: true
+            length: 12
+            fixed: false
+        physicalQuantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: physical_quantity
+        usableQuantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: usable_quantity
+        priceTe:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: price_te
+    lifecycleCallbacks: {  }

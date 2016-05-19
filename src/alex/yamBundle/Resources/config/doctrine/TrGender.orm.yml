@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrGender:
+    type: entity
+    table: tr_gender
+    id:
+        idGender:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_gender
+            generator:
+                strategy: IDENTITY
+    fields:
+        type:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

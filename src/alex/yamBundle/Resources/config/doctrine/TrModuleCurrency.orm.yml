@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrModuleCurrency:
+    type: entity
+    table: tr_module_currency
+    indexes:
+        id_module:
+            columns:
+                - id_module
+    id:
+        idModule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_module
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            id: true
+            column: id_shop
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_currency
+    lifecycleCallbacks: {  }

@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrQuickAccessLang:
+    type: entity
+    table: tr_quick_access_lang
+    id:
+        idQuickAccess:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_quick_access
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+    lifecycleCallbacks: {  }

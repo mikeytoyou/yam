@@ -1,0 +1,53 @@
+alex\yamBundle\Entity\TrShop:
+    type: entity
+    table: tr_shop
+    indexes:
+        id_shop_group:
+            columns:
+                - id_shop_group
+        id_category:
+            columns:
+                - id_category
+        id_theme:
+            columns:
+                - id_theme
+    id:
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShopGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_shop_group
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        idCategory:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_category
+        idTheme:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_theme
+        active:
+            type: boolean
+            nullable: false
+            default: '1'
+        deleted:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

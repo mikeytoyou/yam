@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrSceneLang:
+    type: entity
+    table: tr_scene_lang
+    id:
+        idScene:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_scene
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+    lifecycleCallbacks: {  }

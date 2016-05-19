@@ -1,0 +1,18 @@
+alex\yamBundle\Entity\TrCustomerMessageSyncImap:
+    type: entity
+    table: tr_customer_message_sync_imap
+    indexes:
+        md5_header_index:
+            columns:
+                - md5_header
+    id:
+        md5Header:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            id: true
+            column: md5_header
+            generator:
+                strategy: IDENTITY
+    lifecycleCallbacks: {  }

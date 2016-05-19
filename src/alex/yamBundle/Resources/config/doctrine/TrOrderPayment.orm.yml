@@ -1,0 +1,81 @@
+alex\yamBundle\Entity\TrOrderPayment:
+    type: entity
+    table: tr_order_payment
+    indexes:
+        order_reference:
+            columns:
+                - order_reference
+    id:
+        idOrderPayment:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_order_payment
+            generator:
+                strategy: IDENTITY
+    fields:
+        orderReference:
+            type: string
+            nullable: true
+            length: 9
+            fixed: false
+            column: order_reference
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_currency
+        amount:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+        paymentMethod:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            column: payment_method
+        conversionRate:
+            type: decimal
+            nullable: false
+            precision: 13
+            scale: 6
+            default: '1.000000'
+            column: conversion_rate
+        transactionId:
+            type: string
+            nullable: true
+            length: 254
+            fixed: false
+            column: transaction_id
+        cardNumber:
+            type: string
+            nullable: true
+            length: 254
+            fixed: false
+            column: card_number
+        cardBrand:
+            type: string
+            nullable: true
+            length: 254
+            fixed: false
+            column: card_brand
+        cardExpiration:
+            type: string
+            nullable: true
+            length: 7
+            fixed: true
+            column: card_expiration
+        cardHolder:
+            type: string
+            nullable: true
+            length: 254
+            fixed: false
+            column: card_holder
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+    lifecycleCallbacks: {  }

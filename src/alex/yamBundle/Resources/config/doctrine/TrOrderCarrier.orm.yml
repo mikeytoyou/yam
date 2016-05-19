@@ -1,0 +1,66 @@
+alex\yamBundle\Entity\TrOrderCarrier:
+    type: entity
+    table: tr_order_carrier
+    indexes:
+        id_order:
+            columns:
+                - id_order
+        id_carrier:
+            columns:
+                - id_carrier
+        id_order_invoice:
+            columns:
+                - id_order_invoice
+    id:
+        idOrderCarrier:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_order_carrier
+            generator:
+                strategy: IDENTITY
+    fields:
+        idOrder:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_order
+        idCarrier:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_carrier
+        idOrderInvoice:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_order_invoice
+        weight:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+        shippingCostTaxExcl:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            column: shipping_cost_tax_excl
+        shippingCostTaxIncl:
+            type: decimal
+            nullable: true
+            precision: 20
+            scale: 6
+            column: shipping_cost_tax_incl
+        trackingNumber:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+            column: tracking_number
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+    lifecycleCallbacks: {  }

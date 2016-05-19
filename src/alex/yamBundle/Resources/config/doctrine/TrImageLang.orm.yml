@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrImageLang:
+    type: entity
+    table: tr_image_lang
+    indexes:
+        id_image:
+            columns:
+                - id_image
+    id:
+        idImage:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_image
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        legend:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+    lifecycleCallbacks: {  }

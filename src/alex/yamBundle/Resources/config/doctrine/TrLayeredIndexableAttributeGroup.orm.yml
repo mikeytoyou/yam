@@ -1,0 +1,18 @@
+alex\yamBundle\Entity\TrLayeredIndexableAttributeGroup:
+    type: entity
+    table: tr_layered_indexable_attribute_group
+    id:
+        idAttributeGroup:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_attribute_group
+            generator:
+                strategy: IDENTITY
+    fields:
+        indexable:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,25 @@
+alex\yamBundle\Entity\TrActualizaTabla:
+    type: entity
+    table: tr_actualiza_tabla
+    id:
+        idActualiza:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_actualiza
+            generator:
+                strategy: IDENTITY
+    fields:
+        tabla:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            column: Tabla
+        estado:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+    lifecycleCallbacks: {  }

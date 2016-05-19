@@ -1,0 +1,37 @@
+paquete_index:
+    path:     /
+    defaults: { _controller: "alexyamBundle:Paquete:index" }
+    methods:  GET
+
+paquete_show:
+    path:     /{id}/show
+    defaults: { _controller: "alexyamBundle:Paquete:show" }
+    methods:  GET
+
+paquete_new:
+    path:     /new
+    defaults: { _controller: "alexyamBundle:Paquete:new" }
+    methods:  [GET, POST]
+
+paquete_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "alexyamBundle:Paquete:edit" }
+    methods:  [GET, POST]
+
+paquete_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "alexyamBundle:Paquete:delete" }
+    methods:  DELETE
+
+paqueteconstructor:
+    path:     /paqueteconstructor/{idcliente}
+    defaults: { _controller: "alexyamBundle:Paquete:paqueteconstructor" }
+    
+  
+paqueteconstructormay:
+    path:     /paqueteconstructor/may
+    defaults: { _controller: "alexyamBundle:Paquete:paqueteconstructormay" } 
+    
+listadehotelesjson:
+    path:     /listadehotelesjson/
+    defaults: { _controller: "alexyamBundle:Paquete:listadehotelesjson" } 

@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrThemeSpecific:
+    type: entity
+    table: tr_theme_specific
+    id:
+        idTheme:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_theme
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+        entity:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+        idObject:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_object
+    lifecycleCallbacks: {  }

@@ -1,0 +1,35 @@
+alex\yamBundle\Entity\TrLayeredProductAttribute:
+    type: entity
+    table: tr_layered_product_attribute
+    indexes:
+        id_attribute:
+            columns:
+                - id_attribute
+    id:
+        idAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_attribute
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+        idAttributeGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            id: true
+            column: id_attribute_group
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

@@ -1,0 +1,44 @@
+alex\yamBundle\Entity\TrLayeredPriceIndex:
+    type: entity
+    table: tr_layered_price_index
+    indexes:
+        id_currency:
+            columns:
+                - id_currency
+        price_min:
+            columns:
+                - price_min
+        price_max:
+            columns:
+                - price_max
+    id:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_product
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_currency
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_shop
+    fields:
+        priceMin:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: price_min
+        priceMax:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: price_max
+    lifecycleCallbacks: {  }

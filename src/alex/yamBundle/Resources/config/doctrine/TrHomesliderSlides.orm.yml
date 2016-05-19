@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrHomesliderSlides:
+    type: entity
+    table: tr_homeslider_slides
+    id:
+        idHomesliderSlides:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_homeslider_slides
+            generator:
+                strategy: IDENTITY
+    fields:
+        position:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

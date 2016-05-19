@@ -1,0 +1,33 @@
+alex\yamBundle\Entity\TrAttribute:
+    type: entity
+    table: tr_attribute
+    indexes:
+        attribute_group:
+            columns:
+                - id_attribute_group
+    id:
+        idAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_attribute
+            generator:
+                strategy: IDENTITY
+    fields:
+        idAttributeGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_attribute_group
+        color:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+        position:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+    lifecycleCallbacks: {  }

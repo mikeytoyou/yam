@@ -1,0 +1,35 @@
+alex\yamBundle\Entity\TrModulePreference:
+    type: entity
+    table: tr_module_preference
+    uniqueConstraints:
+        employee_module:
+            columns:
+                - id_employee
+                - module
+    id:
+        idModulePreference:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_module_preference
+            generator:
+                strategy: IDENTITY
+    fields:
+        idEmployee:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_employee
+        module:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+        interest:
+            type: boolean
+            nullable: true
+        favorite:
+            type: boolean
+            nullable: true
+    lifecycleCallbacks: {  }

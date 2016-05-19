@@ -1,0 +1,56 @@
+alex\yamBundle\Entity\TrCmsCategoryLang:
+    type: entity
+    table: tr_cms_category_lang
+    indexes:
+        category_name:
+            columns:
+                - name
+    id:
+        idCmsCategory:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cms_category
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        linkRewrite:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            column: link_rewrite
+        metaTitle:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+            column: meta_title
+        metaKeywords:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: meta_keywords
+        metaDescription:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: meta_description
+    lifecycleCallbacks: {  }

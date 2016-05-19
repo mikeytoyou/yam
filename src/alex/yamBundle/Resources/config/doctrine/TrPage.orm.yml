@@ -1,0 +1,31 @@
+alex\yamBundle\Entity\TrPage:
+    type: entity
+    table: tr_page
+    indexes:
+        id_page_type:
+            columns:
+                - id_page_type
+        id_object:
+            columns:
+                - id_object
+    id:
+        idPage:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_page
+            generator:
+                strategy: IDENTITY
+    fields:
+        idPageType:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_page_type
+        idObject:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_object
+    lifecycleCallbacks: {  }

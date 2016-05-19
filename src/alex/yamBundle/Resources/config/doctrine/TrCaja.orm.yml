@@ -1,0 +1,41 @@
+alex\yamBundle\Entity\TrCaja:
+    type: entity
+    table: tr_caja
+    id:
+        idCaja:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_caja
+            generator:
+                strategy: IDENTITY
+    fields:
+        idEmpleado:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_empleado
+        idTienda:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_tienda
+        nombreCaja:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            column: nombre_caja
+        dateAdd:
+            type: datetime
+            nullable: true
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: true
+            column: date_upd
+        active:
+            type: boolean
+            nullable: true
+    lifecycleCallbacks: {  }

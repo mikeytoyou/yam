@@ -1,0 +1,55 @@
+alex\yamBundle\Entity\TrImageType:
+    type: entity
+    table: tr_image_type
+    indexes:
+        image_type_name:
+            columns:
+                - name
+    id:
+        idImageType:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_image_type
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        width:
+            type: integer
+            nullable: false
+            unsigned: true
+        height:
+            type: integer
+            nullable: false
+            unsigned: true
+        products:
+            type: boolean
+            nullable: false
+            default: '1'
+        categories:
+            type: boolean
+            nullable: false
+            default: '1'
+        manufacturers:
+            type: boolean
+            nullable: false
+            default: '1'
+        suppliers:
+            type: boolean
+            nullable: false
+            default: '1'
+        scenes:
+            type: boolean
+            nullable: false
+            default: '1'
+        stores:
+            type: boolean
+            nullable: false
+            default: '1'
+    lifecycleCallbacks: {  }

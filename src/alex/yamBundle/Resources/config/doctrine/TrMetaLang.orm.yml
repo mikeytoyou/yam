@@ -1,0 +1,53 @@
+alex\yamBundle\Entity\TrMetaLang:
+    type: entity
+    table: tr_meta_lang
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+        id_lang:
+            columns:
+                - id_lang
+    id:
+        idMeta:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_meta
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            id: true
+            column: id_shop
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        title:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+        description:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        keywords:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        urlRewrite:
+            type: string
+            nullable: false
+            length: 254
+            fixed: false
+            column: url_rewrite
+    lifecycleCallbacks: {  }

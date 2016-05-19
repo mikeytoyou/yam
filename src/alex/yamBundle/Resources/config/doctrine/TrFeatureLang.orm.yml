@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrFeatureLang:
+    type: entity
+    table: tr_feature_lang
+    indexes:
+        id_lang:
+            columns:
+                - id_lang
+                - name
+    id:
+        idFeature:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_feature
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+    lifecycleCallbacks: {  }

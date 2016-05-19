@@ -1,0 +1,32 @@
+alex\yamBundle\Entity\Paqueteporcliente:
+    type: entity
+    table: paqueteporcliente
+    indexes:
+        FK_paqueteporcliente_paquete:
+            columns:
+                - paquete_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        cutomerId:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: cutomer_id
+    manyToOne:
+        paquete:
+            targetEntity: Paquete
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                paquete_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

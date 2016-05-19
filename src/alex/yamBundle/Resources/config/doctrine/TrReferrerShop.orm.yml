@@ -1,0 +1,62 @@
+alex\yamBundle\Entity\TrReferrerShop:
+    type: entity
+    table: tr_referrer_shop
+    id:
+        idReferrer:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_referrer
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            id: true
+            column: id_shop
+    fields:
+        cacheVisitors:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: cache_visitors
+        cacheVisits:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: cache_visits
+        cachePages:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: cache_pages
+        cacheRegistrations:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: cache_registrations
+        cacheOrders:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: cache_orders
+        cacheSales:
+            type: decimal
+            nullable: true
+            precision: 17
+            scale: 2
+            column: cache_sales
+        cacheRegRate:
+            type: decimal
+            nullable: true
+            precision: 5
+            scale: 4
+            column: cache_reg_rate
+        cacheOrderRate:
+            type: decimal
+            nullable: true
+            precision: 5
+            scale: 4
+            column: cache_order_rate
+    lifecycleCallbacks: {  }

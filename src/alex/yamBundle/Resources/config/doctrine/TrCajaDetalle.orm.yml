@@ -1,0 +1,49 @@
+alex\yamBundle\Entity\TrCajaDetalle:
+    type: entity
+    table: tr_caja_detalle
+    id:
+        idCajaDetalle:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_caja_detalle
+            generator:
+                strategy: IDENTITY
+    fields:
+        idCaja:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: id_caja
+        montoVirtual:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: monto_virtual
+        montoReal:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: monto_real
+        saldo:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        estado:
+            type: string
+            nullable: true
+            length: 35
+            fixed: false
+        dateAdd:
+            type: datetime
+            nullable: true
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: true
+            column: date_upd
+    lifecycleCallbacks: {  }

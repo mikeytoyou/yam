@@ -1,0 +1,18 @@
+alex\yamBundle\Entity\TrScene:
+    type: entity
+    table: tr_scene
+    id:
+        idScene:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_scene
+            generator:
+                strategy: IDENTITY
+    fields:
+        active:
+            type: boolean
+            nullable: false
+            default: '1'
+    lifecycleCallbacks: {  }

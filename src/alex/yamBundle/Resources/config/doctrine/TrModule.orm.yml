@@ -1,0 +1,32 @@
+alex\yamBundle\Entity\TrModule:
+    type: entity
+    table: tr_module
+    indexes:
+        name:
+            columns:
+                - name
+    id:
+        idModule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_module
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+        version:
+            type: string
+            nullable: false
+            length: 8
+            fixed: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,65 @@
+alex\yamBundle\Entity\TrOrderState:
+    type: entity
+    table: tr_order_state
+    indexes:
+        module_name:
+            columns:
+                - module_name
+    id:
+        idOrderState:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_state
+            generator:
+                strategy: IDENTITY
+    fields:
+        invoice:
+            type: boolean
+            nullable: true
+            default: '0'
+        sendEmail:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: send_email
+        moduleName:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: module_name
+        color:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+        unremovable:
+            type: boolean
+            nullable: false
+        hidden:
+            type: boolean
+            nullable: false
+            default: '0'
+        logable:
+            type: boolean
+            nullable: false
+            default: '0'
+        delivery:
+            type: boolean
+            nullable: false
+            default: '0'
+        shipped:
+            type: boolean
+            nullable: false
+            default: '0'
+        paid:
+            type: boolean
+            nullable: false
+            default: '0'
+        deleted:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

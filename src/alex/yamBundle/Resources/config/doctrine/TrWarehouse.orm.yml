@@ -1,0 +1,50 @@
+alex\yamBundle\Entity\TrWarehouse:
+    type: entity
+    table: tr_warehouse
+    id:
+        idWarehouse:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_warehouse
+            generator:
+                strategy: IDENTITY
+    fields:
+        idCurrency:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_currency
+        idAddress:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_address
+        idEmployee:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_employee
+        reference:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+        name:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+        managementType:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            default: WA
+            column: management_type
+        deleted:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

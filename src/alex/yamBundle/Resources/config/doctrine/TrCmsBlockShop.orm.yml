@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrCmsBlockShop:
+    type: entity
+    table: tr_cms_block_shop
+    id:
+        idCmsBlock:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cms_block
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

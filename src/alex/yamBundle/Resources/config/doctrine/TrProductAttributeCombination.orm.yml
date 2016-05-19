@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrProductAttributeCombination:
+    type: entity
+    table: tr_product_attribute_combination
+    indexes:
+        id_product_attribute:
+            columns:
+                - id_product_attribute
+    id:
+        idAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_attribute
+        idProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product_attribute
+    lifecycleCallbacks: {  }

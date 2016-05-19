@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrProductTag:
+    type: entity
+    table: tr_product_tag
+    indexes:
+        id_tag:
+            columns:
+                - id_tag
+    id:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+        idTag:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_tag
+    lifecycleCallbacks: {  }

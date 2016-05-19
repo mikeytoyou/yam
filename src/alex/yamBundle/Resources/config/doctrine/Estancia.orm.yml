@@ -1,0 +1,44 @@
+alex\yamBundle\Entity\Estancia:
+    type: entity
+    table: estancia
+    indexes:
+        FK_estancia_hotel:
+            columns:
+                - id_hotel
+        FK_estancia_paquete:
+            columns:
+                - paquete_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        diasdepermanencia:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+    manyToOne:
+        idHotel:
+            targetEntity: Hotel
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_hotel:
+                    referencedColumnName: id
+            orphanRemoval: false
+        paquete:
+            targetEntity: Paquete
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                paquete_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,42 @@
+alex\yamBundle\Entity\TrSupplyOrderState:
+    type: entity
+    table: tr_supply_order_state
+    id:
+        idSupplyOrderState:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_supply_order_state
+            generator:
+                strategy: IDENTITY
+    fields:
+        deliveryNote:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: delivery_note
+        editable:
+            type: boolean
+            nullable: false
+            default: '0'
+        receiptState:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: receipt_state
+        pendingReceipt:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: pending_receipt
+        enclosed:
+            type: boolean
+            nullable: false
+            default: '0'
+        color:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+    lifecycleCallbacks: {  }

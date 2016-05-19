@@ -1,0 +1,37 @@
+alex\yamBundle\Entity\TrLayeredFriendlyUrl:
+    type: entity
+    table: tr_layered_friendly_url
+    indexes:
+        id_lang:
+            columns:
+                - id_lang
+        url_key:
+            columns:
+                - url_key
+    id:
+        idLayeredFriendlyUrl:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_layered_friendly_url
+            generator:
+                strategy: IDENTITY
+    fields:
+        urlKey:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            column: url_key
+        data:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: id_lang
+    lifecycleCallbacks: {  }

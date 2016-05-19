@@ -1,0 +1,57 @@
+alex\yamBundle\Entity\TrSupplyOrderHistory:
+    type: entity
+    table: tr_supply_order_history
+    indexes:
+        id_supply_order:
+            columns:
+                - id_supply_order
+        id_employee:
+            columns:
+                - id_employee
+        id_state:
+            columns:
+                - id_state
+    id:
+        idSupplyOrderHistory:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_supply_order_history
+            generator:
+                strategy: IDENTITY
+    fields:
+        idSupplyOrder:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_supply_order
+        idEmployee:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_employee
+        employeeLastname:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            default: ''
+            column: employee_lastname
+        employeeFirstname:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            default: ''
+            column: employee_firstname
+        idState:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_state
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+    lifecycleCallbacks: {  }

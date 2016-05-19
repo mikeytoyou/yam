@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrHookAlias:
+    type: entity
+    table: tr_hook_alias
+    uniqueConstraints:
+        alias:
+            columns:
+                - alias
+    id:
+        idHookAlias:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_hook_alias
+            generator:
+                strategy: IDENTITY
+    fields:
+        alias:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrCartCartRule:
+    type: entity
+    table: tr_cart_cart_rule
+    indexes:
+        id_cart_rule:
+            columns:
+                - id_cart_rule
+    id:
+        idCart:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cart
+        idCartRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cart_rule
+    lifecycleCallbacks: {  }

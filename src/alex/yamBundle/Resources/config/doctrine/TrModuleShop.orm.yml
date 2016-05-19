@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrModuleShop:
+    type: entity
+    table: tr_module_shop
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idModule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_module
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    fields:
+        enableDevice:
+            type: boolean
+            nullable: false
+            default: '7'
+            column: enable_device
+    lifecycleCallbacks: {  }

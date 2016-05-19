@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrPack:
+    type: entity
+    table: tr_pack
+    id:
+        idProductPack:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product_pack
+        idProductItem:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product_item
+    fields:
+        quantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,37 @@
+alex\yamBundle\Entity\TrSupplier:
+    type: entity
+    table: tr_supplier
+    id:
+        idSupplier:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_supplier
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: false
+            column: date_upd
+        active:
+            type: boolean
+            nullable: false
+            default: '0'
+        rucSupplier:
+            type: string
+            nullable: true
+            length: 25
+            fixed: false
+            column: ruc_supplier
+    lifecycleCallbacks: {  }

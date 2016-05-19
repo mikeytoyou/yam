@@ -1,0 +1,29 @@
+alex\yamBundle\Entity\TrGroupLang:
+    type: entity
+    table: tr_group_lang
+    id:
+        idGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_group
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        typeData:
+            type: string
+            nullable: true
+            length: 15
+            fixed: false
+            column: type_data
+    lifecycleCallbacks: {  }

@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrCmsBlockPage:
+    type: entity
+    table: tr_cms_block_page
+    id:
+        idCmsBlockPage:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cms_block_page
+            generator:
+                strategy: IDENTITY
+    fields:
+        idCmsBlock:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_cms_block
+        idCms:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_cms
+        isCategory:
+            type: boolean
+            nullable: false
+            column: is_category
+    lifecycleCallbacks: {  }

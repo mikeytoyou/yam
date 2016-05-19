@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrSpecificPriceRuleConditionGroup:
+    type: entity
+    table: tr_specific_price_rule_condition_group
+    id:
+        idSpecificPriceRuleConditionGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_specific_price_rule_condition_group
+        idSpecificPriceRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_specific_price_rule
+    lifecycleCallbacks: {  }

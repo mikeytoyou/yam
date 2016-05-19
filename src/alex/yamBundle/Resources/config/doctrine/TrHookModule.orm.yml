@@ -1,0 +1,39 @@
+alex\yamBundle\Entity\TrHookModule:
+    type: entity
+    table: tr_hook_module
+    indexes:
+        id_hook:
+            columns:
+                - id_hook
+        id_module:
+            columns:
+                - id_module
+        position:
+            columns:
+                - id_shop
+                - position
+    id:
+        idModule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_module
+        idHook:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_hook
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            id: true
+            column: id_shop
+    fields:
+        position:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

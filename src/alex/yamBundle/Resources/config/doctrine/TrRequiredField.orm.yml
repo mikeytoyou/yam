@@ -1,0 +1,30 @@
+alex\yamBundle\Entity\TrRequiredField:
+    type: entity
+    table: tr_required_field
+    indexes:
+        object_name:
+            columns:
+                - object_name
+    id:
+        idRequiredField:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_required_field
+            generator:
+                strategy: IDENTITY
+    fields:
+        objectName:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            column: object_name
+        fieldName:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            column: field_name
+    lifecycleCallbacks: {  }

@@ -1,0 +1,40 @@
+alex\yamBundle\Entity\TrSceneProducts:
+    type: entity
+    table: tr_scene_products
+    id:
+        idScene:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_scene
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+        xAxis:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: x_axis
+        yAxis:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: y_axis
+    fields:
+        zoneWidth:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: zone_width
+        zoneHeight:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: zone_height
+    lifecycleCallbacks: {  }

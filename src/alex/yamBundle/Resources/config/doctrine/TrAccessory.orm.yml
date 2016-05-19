@@ -1,0 +1,24 @@
+alex\yamBundle\Entity\TrAccessory:
+    type: entity
+    table: tr_accessory
+    indexes:
+        accessory_product:
+            columns:
+                - id_product_1
+                - id_product_2
+    id:
+        idProduct1:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product_1
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProduct2:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product_2
+    lifecycleCallbacks: {  }

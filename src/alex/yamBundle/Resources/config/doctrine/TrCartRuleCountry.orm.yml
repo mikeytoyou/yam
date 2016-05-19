@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrCartRuleCountry:
+    type: entity
+    table: tr_cart_rule_country
+    id:
+        idCartRule:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cart_rule
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_country
+    lifecycleCallbacks: {  }

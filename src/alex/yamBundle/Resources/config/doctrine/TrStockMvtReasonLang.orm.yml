@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrStockMvtReasonLang:
+    type: entity
+    table: tr_stock_mvt_reason_lang
+    id:
+        idStockMvtReason:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_stock_mvt_reason
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+    lifecycleCallbacks: {  }

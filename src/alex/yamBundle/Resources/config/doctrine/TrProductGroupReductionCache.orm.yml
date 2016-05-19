@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrProductGroupReductionCache:
+    type: entity
+    table: tr_product_group_reduction_cache
+    id:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+        idGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_group
+    fields:
+        reduction:
+            type: decimal
+            nullable: false
+            precision: 4
+            scale: 3
+    lifecycleCallbacks: {  }

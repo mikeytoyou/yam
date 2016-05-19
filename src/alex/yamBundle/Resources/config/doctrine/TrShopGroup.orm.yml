@@ -1,0 +1,39 @@
+alex\yamBundle\Entity\TrShopGroup:
+    type: entity
+    table: tr_shop_group
+    id:
+        idShopGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop_group
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        shareCustomer:
+            type: boolean
+            nullable: false
+            column: share_customer
+        shareOrder:
+            type: boolean
+            nullable: false
+            column: share_order
+        shareStock:
+            type: boolean
+            nullable: false
+            column: share_stock
+        active:
+            type: boolean
+            nullable: false
+            default: '1'
+        deleted:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrProductAttributeImage:
+    type: entity
+    table: tr_product_attribute_image
+    indexes:
+        id_image:
+            columns:
+                - id_image
+    id:
+        idProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product_attribute
+        idImage:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_image
+    lifecycleCallbacks: {  }

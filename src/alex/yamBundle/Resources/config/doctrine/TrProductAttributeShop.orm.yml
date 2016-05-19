@@ -1,0 +1,65 @@
+alex\yamBundle\Entity\TrProductAttributeShop:
+    type: entity
+    table: tr_product_attribute_shop
+    id:
+        idProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product_attribute
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    fields:
+        wholesalePrice:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: wholesale_price
+        price:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+        ecotax:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 6
+            default: '0.000000'
+        weight:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+        unitPriceImpact:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 2
+            default: '0.00'
+            column: unit_price_impact
+        defaultOn:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: default_on
+        minimalQuantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: minimal_quantity
+        availableDate:
+            type: date
+            nullable: false
+            column: available_date
+    lifecycleCallbacks: {  }

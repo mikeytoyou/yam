@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrCategoryShop:
+    type: entity
+    table: tr_category_shop
+    id:
+        idCategory:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_category
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_shop
+    fields:
+        position:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,46 @@
+alex\yamBundle\Entity\TrPagenotfound:
+    type: entity
+    table: tr_pagenotfound
+    indexes:
+        date_add:
+            columns:
+                - date_add
+    id:
+        idPagenotfound:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_pagenotfound
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop
+        idShopGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: id_shop_group
+        requestUri:
+            type: string
+            nullable: false
+            length: 256
+            fixed: false
+            column: request_uri
+        httpReferer:
+            type: string
+            nullable: false
+            length: 256
+            fixed: false
+            column: http_referer
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+    lifecycleCallbacks: {  }

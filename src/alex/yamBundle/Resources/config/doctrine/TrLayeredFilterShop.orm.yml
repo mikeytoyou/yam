@@ -1,0 +1,21 @@
+alex\yamBundle\Entity\TrLayeredFilterShop:
+    type: entity
+    table: tr_layered_filter_shop
+    indexes:
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idLayeredFilter:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_layered_filter
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_shop
+    lifecycleCallbacks: {  }

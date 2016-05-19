@@ -1,0 +1,47 @@
+alex\yamBundle\Entity\TrManufacturerLang:
+    type: entity
+    table: tr_manufacturer_lang
+    id:
+        idManufacturer:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_manufacturer
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        shortDescription:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+            column: short_description
+        metaTitle:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+            column: meta_title
+        metaKeywords:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: meta_keywords
+        metaDescription:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: meta_description
+    lifecycleCallbacks: {  }

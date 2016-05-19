@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrContactLang:
+    type: entity
+    table: tr_contact_lang
+    id:
+        idContact:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_contact
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+    lifecycleCallbacks: {  }

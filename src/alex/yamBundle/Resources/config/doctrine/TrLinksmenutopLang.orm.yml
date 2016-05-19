@@ -1,0 +1,40 @@
+alex\yamBundle\Entity\TrLinksmenutopLang:
+    type: entity
+    table: tr_linksmenutop_lang
+    indexes:
+        id_linksmenutop:
+            columns:
+                - id_linksmenutop
+                - id_lang
+                - id_shop
+    id:
+        idLinksmenutop:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_linksmenutop
+            generator:
+                strategy: IDENTITY
+    fields:
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_lang
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_shop
+        label:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+        link:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+    lifecycleCallbacks: {  }

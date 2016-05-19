@@ -1,0 +1,43 @@
+alex\yamBundle\Entity\TrHomesliderSlidesLang:
+    type: entity
+    table: tr_homeslider_slides_lang
+    id:
+        idHomesliderSlides:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_homeslider_slides
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+        description:
+            type: text
+            nullable: false
+            length: 65535
+            fixed: false
+        legend:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+        url:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+        image:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+    lifecycleCallbacks: {  }

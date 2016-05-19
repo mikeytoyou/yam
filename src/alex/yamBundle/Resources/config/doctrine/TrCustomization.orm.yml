@@ -1,0 +1,62 @@
+alex\yamBundle\Entity\TrCustomization:
+    type: entity
+    table: tr_customization
+    indexes:
+        id_product_attribute:
+            columns:
+                - id_product_attribute
+    id:
+        idCustomization:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_customization
+        idCart:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cart
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_product
+        idAddressDelivery:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            id: true
+            column: id_address_delivery
+    fields:
+        idProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_product_attribute
+        quantity:
+            type: integer
+            nullable: false
+            unsigned: false
+        quantityRefunded:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '0'
+            column: quantity_refunded
+        quantityReturned:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '0'
+            column: quantity_returned
+        inCart:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: in_cart
+    lifecycleCallbacks: {  }

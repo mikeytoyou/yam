@@ -1,0 +1,31 @@
+alex\yamBundle\Entity\TrMeta:
+    type: entity
+    table: tr_meta
+    indexes:
+        meta_name:
+            columns:
+                - page
+    uniqueConstraints:
+        page:
+            columns:
+                - page
+    id:
+        idMeta:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_meta
+            generator:
+                strategy: IDENTITY
+    fields:
+        page:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        configurable:
+            type: boolean
+            nullable: false
+            default: '1'
+    lifecycleCallbacks: {  }

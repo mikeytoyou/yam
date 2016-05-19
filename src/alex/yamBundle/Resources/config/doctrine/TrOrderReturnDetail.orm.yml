@@ -1,0 +1,31 @@
+alex\yamBundle\Entity\TrOrderReturnDetail:
+    type: entity
+    table: tr_order_return_detail
+    id:
+        idOrderReturn:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_return
+        idOrderDetail:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_detail
+        idCustomization:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            id: true
+            column: id_customization
+    fields:
+        productQuantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: product_quantity
+    lifecycleCallbacks: {  }

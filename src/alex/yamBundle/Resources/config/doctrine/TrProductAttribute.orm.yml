@@ -1,0 +1,115 @@
+alex\yamBundle\Entity\TrProductAttribute:
+    type: entity
+    table: tr_product_attribute
+    indexes:
+        product_attribute_product:
+            columns:
+                - id_product
+        reference:
+            columns:
+                - reference
+        supplier_reference:
+            columns:
+                - supplier_reference
+        product_default:
+            columns:
+                - id_product
+                - default_on
+        id_product_id_product_attribute:
+            columns:
+                - id_product_attribute
+                - id_product
+    id:
+        idProductAttribute:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product_attribute
+            generator:
+                strategy: IDENTITY
+    fields:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_product
+        reference:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+        supplierReference:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            column: supplier_reference
+        location:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+        ean13:
+            type: string
+            nullable: true
+            length: 13
+            fixed: false
+        upc:
+            type: string
+            nullable: true
+            length: 12
+            fixed: false
+        wholesalePrice:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+            column: wholesale_price
+        price:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+        ecotax:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 6
+            default: '0.000000'
+        quantity:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '0'
+        weight:
+            type: decimal
+            nullable: false
+            precision: 20
+            scale: 6
+            default: '0.000000'
+        unitPriceImpact:
+            type: decimal
+            nullable: false
+            precision: 17
+            scale: 2
+            default: '0.00'
+            column: unit_price_impact
+        defaultOn:
+            type: boolean
+            nullable: false
+            default: '0'
+            column: default_on
+        minimalQuantity:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            column: minimal_quantity
+        availableDate:
+            type: date
+            nullable: false
+            column: available_date
+    lifecycleCallbacks: {  }

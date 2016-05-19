@@ -1,0 +1,22 @@
+alex\yamBundle\Entity\TrRisk:
+    type: entity
+    table: tr_risk
+    id:
+        idRisk:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_risk
+            generator:
+                strategy: IDENTITY
+    fields:
+        percent:
+            type: boolean
+            nullable: false
+        color:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+    lifecycleCallbacks: {  }

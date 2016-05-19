@@ -1,0 +1,47 @@
+alex\yamBundle\Entity\TrCmsLang:
+    type: entity
+    table: tr_cms_lang
+    id:
+        idCms:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_cms
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        metaTitle:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            column: meta_title
+        metaDescription:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: meta_description
+        metaKeywords:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: meta_keywords
+        content:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+        linkRewrite:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            column: link_rewrite
+    lifecycleCallbacks: {  }

@@ -1,0 +1,17 @@
+alex\yamBundle\Entity\TrCarrierGroup:
+    type: entity
+    table: tr_carrier_group
+    id:
+        idCarrier:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_carrier
+        idGroup:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_group
+    lifecycleCallbacks: {  }

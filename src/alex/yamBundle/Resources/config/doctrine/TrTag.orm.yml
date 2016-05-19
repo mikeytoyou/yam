@@ -1,0 +1,31 @@
+alex\yamBundle\Entity\TrTag:
+    type: entity
+    table: tr_tag
+    indexes:
+        tag_name:
+            columns:
+                - name
+        id_lang:
+            columns:
+                - id_lang
+    id:
+        idTag:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_tag
+            generator:
+                strategy: IDENTITY
+    fields:
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_lang
+        name:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+    lifecycleCallbacks: {  }

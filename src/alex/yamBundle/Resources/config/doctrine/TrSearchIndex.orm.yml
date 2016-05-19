@@ -1,0 +1,23 @@
+alex\yamBundle\Entity\TrSearchIndex:
+    type: entity
+    table: tr_search_index
+    id:
+        idWord:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_word
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+    fields:
+        weight:
+            type: smallint
+            nullable: false
+            unsigned: true
+            default: '1'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Paqueteporcliente list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Cutomerid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for paqueteporcliente in paqueteporclientes %}
+            <tr>
+                <td><a href="{{ path('paqueteporcliente_show', { 'id': paqueteporcliente.id }) }}">{{ paqueteporcliente.id }}</a></td>
+                <td>{{ paqueteporcliente.cutomerId }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('paqueteporcliente_show', { 'id': paqueteporcliente.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('paqueteporcliente_edit', { 'id': paqueteporcliente.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('paqueteporcliente_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

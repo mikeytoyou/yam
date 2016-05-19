@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrConnectionsPage:
+    type: entity
+    table: tr_connections_page
+    id:
+        idConnections:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_connections
+        idPage:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_page
+        timeStart:
+            type: datetime
+            nullable: false
+            id: true
+            column: time_start
+    fields:
+        timeEnd:
+            type: datetime
+            nullable: true
+            column: time_end
+    lifecycleCallbacks: {  }

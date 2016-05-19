@@ -1,0 +1,84 @@
+alex\yamBundle\Entity\TrProductLang:
+    type: entity
+    table: tr_product_lang
+    indexes:
+        id_lang:
+            columns:
+                - id_lang
+        name:
+            columns:
+                - name
+    id:
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '1'
+            id: true
+            column: id_shop
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        descriptionShort:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+            column: description_short
+        linkRewrite:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            column: link_rewrite
+        metaDescription:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: meta_description
+        metaKeywords:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: meta_keywords
+        metaTitle:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+            column: meta_title
+        name:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+        availableNow:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: available_now
+        availableLater:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            column: available_later
+    lifecycleCallbacks: {  }

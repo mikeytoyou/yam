@@ -1,0 +1,30 @@
+alex\yamBundle\Entity\TrFeatureProduct:
+    type: entity
+    table: tr_feature_product
+    indexes:
+        id_feature_value:
+            columns:
+                - id_feature_value
+        id_product:
+            columns:
+                - id_product
+    id:
+        idFeature:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_feature
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_product
+    fields:
+        idFeatureValue:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_feature_value
+    lifecycleCallbacks: {  }

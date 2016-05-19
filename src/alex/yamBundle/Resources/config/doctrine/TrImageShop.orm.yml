@@ -1,0 +1,32 @@
+alex\yamBundle\Entity\TrImageShop:
+    type: entity
+    table: tr_image_shop
+    indexes:
+        id_image:
+            columns:
+                - id_image
+                - id_shop
+                - cover
+        id_shop:
+            columns:
+                - id_shop
+    id:
+        idImage:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_image
+            generator:
+                strategy: IDENTITY
+    fields:
+        idShop:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_shop
+        cover:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

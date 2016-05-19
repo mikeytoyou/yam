@@ -1,0 +1,150 @@
+alex\yamBundle\Entity\TrAddress:
+    type: entity
+    table: tr_address
+    indexes:
+        address_customer:
+            columns:
+                - id_customer
+        id_country:
+            columns:
+                - id_country
+        id_state:
+            columns:
+                - id_state
+        id_manufacturer:
+            columns:
+                - id_manufacturer
+        id_supplier:
+            columns:
+                - id_supplier
+        id_warehouse:
+            columns:
+                - id_warehouse
+    id:
+        idAddress:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_address
+            generator:
+                strategy: IDENTITY
+    fields:
+        idCountry:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: id_country
+        idState:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: id_state
+        idCustomer:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_customer
+        idManufacturer:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_manufacturer
+        idSupplier:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_supplier
+        idWarehouse:
+            type: integer
+            nullable: false
+            unsigned: true
+            default: '0'
+            column: id_warehouse
+        alias:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        company:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+        lastname:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        firstname:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+        address1:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+        address2:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+        postcode:
+            type: string
+            nullable: true
+            length: 12
+            fixed: false
+        city:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+        other:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        phone:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+        phoneMobile:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            column: phone_mobile
+        vatNumber:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            column: vat_number
+        dni:
+            type: string
+            nullable: true
+            length: 16
+            fixed: false
+        dateAdd:
+            type: datetime
+            nullable: false
+            column: date_add
+        dateUpd:
+            type: datetime
+            nullable: false
+            column: date_upd
+        active:
+            type: boolean
+            nullable: false
+            default: '1'
+        deleted:
+            type: boolean
+            nullable: false
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,27 @@
+alex\yamBundle\Entity\TrSpecificPricePriority:
+    type: entity
+    table: tr_specific_price_priority
+    uniqueConstraints:
+        id_product:
+            columns:
+                - id_product
+    id:
+        idSpecificPricePriority:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_specific_price_priority
+        idProduct:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            column: id_product
+    fields:
+        priority:
+            type: string
+            nullable: false
+            length: 80
+            fixed: false
+    lifecycleCallbacks: {  }

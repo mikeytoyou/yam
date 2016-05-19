@@ -1,0 +1,28 @@
+alex\yamBundle\Entity\TrOrderMessageLang:
+    type: entity
+    table: tr_order_message_lang
+    id:
+        idOrderMessage:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_order_message
+        idLang:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: id_lang
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+        message:
+            type: text
+            nullable: false
+            length: 65535
+            fixed: false
+    lifecycleCallbacks: {  }
