@@ -141,12 +141,13 @@ class PaqueteController extends Controller
         ;
     }
     
-        public function paqueteconstructorAction(Request $request)
+        public function paqueteconstructorAction(Request $request,$idcliente)
     {
-            
-     
+           $em = $this->getDoctrine()->getManager(); 
+     $repcli=$em->getRepository('alexyamBundle:TrCustomer');
+     $cliente= $repcli->find($idcliente);
 
-        return $this->render('paquete/constructorpaquete.html.twig');
+        return $this->render('paquete/constructorpaquete.html.twig',array('cliente'=>$cliente->getIdCustomer()));
     }
     
      public function paqueteconstructormayAction(Request $request,$idcliente)
@@ -156,10 +157,10 @@ class PaqueteController extends Controller
      $duraciones=$paquetereq->duraciones;
      $paquete = new Paquete();
     $em = $this->getDoctrine()->getManager();
-   
-     $repcli=$em->getRepository('alexyamBundle:TrCustomer');
+    $repcli=$em->getRepository('alexyamBundle:TrCustomer');
      $cliente= $repcli->find($idcliente);
-      $paquete->setIdCustomer( $cliente->getId());
+     
+      $paquete->setIdCustomer( $cliente->getIdCustomer());
             $em->persist($paquete);
             $em->flush();
      foreach ($duraciones as $duracion){

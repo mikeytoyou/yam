@@ -1,5 +1,11 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -10,20 +16,23 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
-<script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
-<link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> 
-<script  type="text/javascript" src="{{ asset('bundles/js/main.js') }}"  > </script>
-
- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
- 
+<!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
 
-  <!-- Angular Material Library -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+ 
+ <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> 
+<script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+
+<script  type="text/javascript" src="{{ asset('bundles/js/main.js') }}"  > </script>
+
+
+ 
+ 
+  
 
 
 <script>
@@ -36,7 +45,12 @@ app.controller("myCtrl", function($scope,$http) {
          $scope.paquete.incluyes=[];
         $scope.paquete.lugarnuevo='';
          
-         $scope.gridDuraciones= { data:  [{'nombre':'carlos','apellido':'dos'}] };
+         $scope.myData = [{name: "Moroni", age: 50},
+                     {name: "Tiancum", age: 43},
+                     {name: "Jacob", age: 27},
+                     {name: "Nephi", age: 29},
+                     {name: "Enos", age: 34}];
+    $scope.gridOptions = { data: 'myData' };
         
          $scope.getlistadehoteles=function(){
              
@@ -123,9 +137,11 @@ app.controller("myCtrl", function($scope,$http) {
          
                 
 
-                $http.post("{{url('paqueteconstructormay')}}", $scope.paquete)
+                $http.post("{{url('paqueteconstructormay',{'idcliente':cliente})}}", $scope.paquete)
                             .success(function(respuesta){
-                               $( "#resultados" ).html(respuesta);
+                                console.log(respuesta);
+                               
+                     
                             });
   
          
@@ -147,7 +163,8 @@ app.controller("myCtrl", function($scope,$http) {
 
 
 <div id="construirpaquete" ng-app="myApp" ng-controller="myCtrl">
-    <form action="{{url('paqueteconstructormay')}}">   
+    
+    <form ng-submit="paquete.guardar()">   
   <div class="panel-group" id="accordion">
       
       
@@ -163,8 +180,7 @@ app.controller("myCtrl", function($scope,$http) {
     <div id="collapse4" class="panel-collapse collapse">
         <div class="panel-body">
             
-            <div  class="gridStyle" ng-grid="gridDuraciones">
-            </div>
+            
       
           <table class="table table-bordered table-striped">
             <thead>
@@ -439,12 +455,12 @@ app.controller("myCtrl", function($scope,$http) {
 </div>
     
   
-  <button type="button"  ng-click="paquete.guardar()">Guardar y hacer correo</button>
+        <button type="submit">  Guardar y hacer correo</button>
      
 </form>
   
 </div>
     
-  <div id="resutados"></div>
+ 
     
   

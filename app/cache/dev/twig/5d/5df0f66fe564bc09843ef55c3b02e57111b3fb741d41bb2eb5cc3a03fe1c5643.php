@@ -15,12 +15,18 @@ class __TwigTemplate_b974473fc6a22355ca7b2f4b8c0520878f49696e69e77fcaf01ac78e416
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_be8df87a07bf4051e13507eb96d43bcd47e4c0299929ddb0bac90c96fc423098 = $this->env->getExtension("native_profiler");
-        $__internal_be8df87a07bf4051e13507eb96d43bcd47e4c0299929ddb0bac90c96fc423098->enter($__internal_be8df87a07bf4051e13507eb96d43bcd47e4c0299929ddb0bac90c96fc423098_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
+        $__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9 = $this->env->getExtension("native_profiler");
+        $__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9->enter($__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
 
         // line 1
-        echo "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js\"></script>
-<script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js\"></script>
+        echo "<link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css\">
+
+<script src=\"//code.jquery.com/jquery-1.10.2.js\"></script>
+
+<script src=\"//code.jquery.com/ui/1.11.4/jquery-ui.js\"></script>
+
+<script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js\"></script>
+
 <!-- Latest compiled and minified CSS -->
 <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" integrity=\"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7\" crossorigin=\"anonymous\">
 
@@ -31,23 +37,26 @@ class __TwigTemplate_b974473fc6a22355ca7b2f4b8c0520878f49696e69e77fcaf01ac78e416
 <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\" integrity=\"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\" crossorigin=\"anonymous\"></script>
 
 
-<script src=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js\"></script>
-<link rel=\"stylesheet\" href=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css\"> 
-<script  type=\"text/javascript\" src=\"";
-        // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/js/main.js"), "html", null, true);
-        echo "\"  > </script>
-
- <script src=\"//code.jquery.com/ui/1.11.4/jquery-ui.js\"></script>
- <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css\">
- 
+<!-- Angular Material Library -->
+  <script src=\"http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js\"></script>
  <link rel=\"stylesheet\" href=\"http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css\">
 <script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js\"></script>
   <script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js\"></script>
   <script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js\"></script>
 
-  <!-- Angular Material Library -->
-  <script src=\"http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js\"></script>
+ 
+ <link rel=\"stylesheet\" href=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css\"> 
+<script src=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js\"></script>
+
+<script  type=\"text/javascript\" src=\"";
+        // line 30
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/js/main.js"), "html", null, true);
+        echo "\"  > </script>
+
+
+ 
+ 
+  
 
 
 <script>
@@ -60,12 +69,17 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
          \$scope.paquete.incluyes=[];
         \$scope.paquete.lugarnuevo='';
          
-         \$scope.gridDuraciones= { data:  [{'nombre':'carlos','apellido':'dos'}] };
+         \$scope.myData = [{name: \"Moroni\", age: 50},
+                     {name: \"Tiancum\", age: 43},
+                     {name: \"Jacob\", age: 27},
+                     {name: \"Nephi\", age: 29},
+                     {name: \"Enos\", age: 34}];
+    \$scope.gridOptions = { data: 'myData' };
         
          \$scope.getlistadehoteles=function(){
              
               \$http.get(\"";
-        // line 43
+        // line 57
         echo $this->env->getExtension('routing')->getUrl("listadehotelesjson");
         echo "\")
                             .success(function(respuesta){
@@ -151,11 +165,13 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
                 
 
                 \$http.post(\"";
-        // line 126
-        echo $this->env->getExtension('routing')->getUrl("paqueteconstructormay");
+        // line 140
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getUrl("paqueteconstructormay", array("idcliente" => (isset($context["cliente"]) ? $context["cliente"] : $this->getContext($context, "cliente")))), "html", null, true);
         echo "\", \$scope.paquete)
                             .success(function(respuesta){
-                               \$( \"#resultados\" ).html(respuesta);
+                                console.log(respuesta);
+                               
+                     
                             });
   
          
@@ -177,10 +193,8 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 
 
 <div id=\"construirpaquete\" ng-app=\"myApp\" ng-controller=\"myCtrl\">
-    <form action=\"";
-        // line 150
-        echo $this->env->getExtension('routing')->getUrl("paqueteconstructormay");
-        echo "\">   
+    
+    <form ng-submit=\"paquete.guardar()\">   
   <div class=\"panel-group\" id=\"accordion\">
       
       
@@ -196,7 +210,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
     <div id=\"collapse4\" class=\"panel-collapse collapse\">
         <div class=\"panel-body\">
             
-            <div  class=\"gridStyle\" ng-grid=\"gridDuraciones\">
+            <div  class=\"gridStyle\" ng-grid=\"gridOptions\">
+                
+                
+                verasddd
             </div>
       
           <table class=\"table table-bordered table-striped\">
@@ -472,18 +489,18 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 </div>
     
   
-  <button type=\"button\"  ng-click=\"paquete.guardar()\">Guardar y hacer correo</button>
+        <button type=\"submit\">  Guardar y hacer correo</button>
      
 </form>
   
 </div>
     
-  <div id=\"resutados\"></div>
+ 
     
   
 ";
         
-        $__internal_be8df87a07bf4051e13507eb96d43bcd47e4c0299929ddb0bac90c96fc423098->leave($__internal_be8df87a07bf4051e13507eb96d43bcd47e4c0299929ddb0bac90c96fc423098_prof);
+        $__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9->leave($__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9_prof);
 
     }
 
@@ -499,11 +516,17 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 
     public function getDebugInfo()
     {
-        return array (  182 => 150,  155 => 126,  69 => 43,  38 => 15,  22 => 1,);
+        return array (  169 => 140,  83 => 57,  53 => 30,  22 => 1,);
     }
 }
-/* <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>*/
-/* <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>*/
+/* <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">*/
+/* */
+/* <script src="//code.jquery.com/jquery-1.10.2.js"></script>*/
+/* */
+/* <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>*/
+/* */
+/* <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>*/
+/* */
 /* <!-- Latest compiled and minified CSS -->*/
 /* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">*/
 /* */
@@ -514,20 +537,23 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /* <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>*/
 /* */
 /* */
-/* <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>*/
-/* <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> */
-/* <script  type="text/javascript" src="{{ asset('bundles/js/main.js') }}"  > </script>*/
-/* */
-/*  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>*/
-/*  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">*/
-/*  */
+/* <!-- Angular Material Library -->*/
+/*   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>*/
 /*  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">*/
 /* <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>*/
 /*   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>*/
 /*   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>*/
 /* */
-/*   <!-- Angular Material Library -->*/
-/*   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>*/
+/*  */
+/*  <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> */
+/* <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>*/
+/* */
+/* <script  type="text/javascript" src="{{ asset('bundles/js/main.js') }}"  > </script>*/
+/* */
+/* */
+/*  */
+/*  */
+/*   */
 /* */
 /* */
 /* <script>*/
@@ -540,7 +566,12 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*          $scope.paquete.incluyes=[];*/
 /*         $scope.paquete.lugarnuevo='';*/
 /*          */
-/*          $scope.gridDuraciones= { data:  [{'nombre':'carlos','apellido':'dos'}] };*/
+/*          $scope.myData = [{name: "Moroni", age: 50},*/
+/*                      {name: "Tiancum", age: 43},*/
+/*                      {name: "Jacob", age: 27},*/
+/*                      {name: "Nephi", age: 29},*/
+/*                      {name: "Enos", age: 34}];*/
+/*     $scope.gridOptions = { data: 'myData' };*/
 /*         */
 /*          $scope.getlistadehoteles=function(){*/
 /*              */
@@ -627,9 +658,11 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*          */
 /*                 */
 /* */
-/*                 $http.post("{{url('paqueteconstructormay')}}", $scope.paquete)*/
+/*                 $http.post("{{url('paqueteconstructormay',{'idcliente':cliente})}}", $scope.paquete)*/
 /*                             .success(function(respuesta){*/
-/*                                $( "#resultados" ).html(respuesta);*/
+/*                                 console.log(respuesta);*/
+/*                                */
+/*                      */
 /*                             });*/
 /*   */
 /*          */
@@ -651,7 +684,8 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /* */
 /* */
 /* <div id="construirpaquete" ng-app="myApp" ng-controller="myCtrl">*/
-/*     <form action="{{url('paqueteconstructormay')}}">   */
+/*     */
+/*     <form ng-submit="paquete.guardar()">   */
 /*   <div class="panel-group" id="accordion">*/
 /*       */
 /*       */
@@ -667,7 +701,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*     <div id="collapse4" class="panel-collapse collapse">*/
 /*         <div class="panel-body">*/
 /*             */
-/*             <div  class="gridStyle" ng-grid="gridDuraciones">*/
+/*             <div  class="gridStyle" ng-grid="gridOptions">*/
+/*                 */
+/*                 */
+/*                 verasddd*/
 /*             </div>*/
 /*       */
 /*           <table class="table table-bordered table-striped">*/
@@ -943,13 +980,13 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /* </div>*/
 /*     */
 /*   */
-/*   <button type="button"  ng-click="paquete.guardar()">Guardar y hacer correo</button>*/
+/*         <button type="submit">  Guardar y hacer correo</button>*/
 /*      */
 /* </form>*/
 /*   */
 /* </div>*/
 /*     */
-/*   <div id="resutados"></div>*/
+/*  */
 /*     */
 /*   */
 /* */

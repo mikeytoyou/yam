@@ -29,7 +29,7 @@ paqueteconstructor:
     
   
 paqueteconstructormay:
-    path:     /paqueteconstructor/may
+    path:     /paqueteconstructormay/{idcliente}
     defaults: { _controller: "alexyamBundle:Paquete:paqueteconstructormay" } 
     
 listadehotelesjson:

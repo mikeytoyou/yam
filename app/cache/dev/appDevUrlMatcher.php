@@ -305,8 +305,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 }
 
                 // paqueteconstructormay
-                if ($pathinfo === '/paquete/paqueteconstructor/may') {
-                    return array (  '_controller' => 'alex\\yamBundle\\Controller\\PaqueteController::paqueteconstructormayAction',  '_route' => 'paqueteconstructormay',);
+                if (0 === strpos($pathinfo, '/paquete/paqueteconstructormay') && preg_match('#^/paquete/paqueteconstructormay/(?P<idcliente>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'paqueteconstructormay')), array (  '_controller' => 'alex\\yamBundle\\Controller\\PaqueteController::paqueteconstructormayAction',));
                 }
 
             }
