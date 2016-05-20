@@ -15,8 +15,8 @@ class __TwigTemplate_b974473fc6a22355ca7b2f4b8c0520878f49696e69e77fcaf01ac78e416
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9 = $this->env->getExtension("native_profiler");
-        $__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9->enter($__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
+        $__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48 = $this->env->getExtension("native_profiler");
+        $__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48->enter($__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
 
         // line 1
         echo "<link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css\">
@@ -207,14 +207,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
         Duracion del paquete</a>
       </h4>
     </div>
-    <div id=\"collapse4\" class=\"panel-collapse collapse\">
+    <div id=\"collapse4\" class=\"panel-collapse collapse in\">
         <div class=\"panel-body\">
             
-            <div  class=\"gridStyle\" ng-grid=\"gridOptions\">
-                
-                
-                verasddd
-            </div>
+            
       
           <table class=\"table table-bordered table-striped\">
             <thead>
@@ -278,7 +274,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
         Lugares</a>
       </h4>
     </div>
-    <div id=\"collapse1\" class=\"panel-collapse collapse in\">
+    <div id=\"collapse1\" class=\"panel-collapse collapse \">
         <div class=\"panel-body\">
             
             
@@ -500,7 +496,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
   
 ";
         
-        $__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9->leave($__internal_2e2169975e4450bedb45d5ab3efe3052f91376b6bf62f3f591634633b60cefd9_prof);
+        $__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48->leave($__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48_prof);
 
     }
 
@@ -698,14 +694,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*         Duracion del paquete</a>*/
 /*       </h4>*/
 /*     </div>*/
-/*     <div id="collapse4" class="panel-collapse collapse">*/
+/*     <div id="collapse4" class="panel-collapse collapse in">*/
 /*         <div class="panel-body">*/
 /*             */
-/*             <div  class="gridStyle" ng-grid="gridOptions">*/
-/*                 */
-/*                 */
-/*                 verasddd*/
-/*             </div>*/
+/*             */
 /*       */
 /*           <table class="table table-bordered table-striped">*/
 /*             <thead>*/
@@ -769,7 +761,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*         Lugares</a>*/
 /*       </h4>*/
 /*     </div>*/
-/*     <div id="collapse1" class="panel-collapse collapse in">*/
+/*     <div id="collapse1" class="panel-collapse collapse ">*/
 /*         <div class="panel-body">*/
 /*             */
 /*             */

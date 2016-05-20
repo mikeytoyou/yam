@@ -1,18 +1,18 @@
 
     var dep=['ngGrid'];
-    var app = angular.module("myApp",['ngGrid','ngMaterial']);
+    var app = angular.module("myApp",[]);
     app.config(function($interpolateProvider){
     $interpolateProvider.startSymbol('/.').endSymbol('./');
     
 })
-        app.config(function($mdThemingProvider) {
+        //app.config(function($mdThemingProvider) {
 
     // Configure a dark theme with primary foreground yellow
 
-    $mdThemingProvider.theme('docs-dark', 'default')
-      .primaryPalette('yellow')
-      .dark();
+    //$mdThemingProvider.theme('docs-dark', 'default')
+     // .primaryPalette('yellow')
+      //.dark();
 
-  });
+  //});
 
 
