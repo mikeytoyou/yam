@@ -27,11 +27,9 @@
  <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> 
 <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
 
-<link href="../../../../web/bundles/wysy/editor.css" rel="stylesheet" type="text/css"/>
-<script src="../../../../web/bundles/wysy/editor.js" type="text/javascript"></script>
 
-<script src="../../../../web/bundles/tinymce-dist/jquery.tinymce.js" type="text/javascript"></script>
-<script src="../../../../web/bundles/tinymce-dist/tinymce.jquery.js" type="text/javascript"></script>
+
+<script src="../../../../web/bundles/tinymce/tinymce.min.js" type="text/javascript"></script>
 
 
   <script type="text/javascript" >
@@ -199,12 +197,10 @@ app.controller("myCtrl", function($scope,$http) {
   }
      };
      
-       $scope.cambiarplantilla= function(proveedor,plantilla){
-         var pro=$scope.provedorselecinados.indexOf(proveedor);
-         if(pro>=0 ){
-          $scope.provedorselecinados[pro].textoenriquecido=plantilla.textoenriquecido;
+       $scope.cambiarplantilla= function(proveedor){
+         
           	  tinymce.init({
-  selector: 'textarea',
+  selector: '#'+proveedor.nombre,
   height: 500,
   plugins: 'visualblocks',
   content_css: 'css/content.css',
@@ -216,7 +212,7 @@ app.controller("myCtrl", function($scope,$http) {
     '//www.tinymce.com/css/codepen.min.css'
   ]
  });
-            }
+            
      };
      
      
@@ -596,15 +592,13 @@ app.controller("myCtrl", function($scope,$http) {
                           
                           
                           <p>
-                              <select name="plantillaselec" ng-options="plantilla as plantilla.nombre for plantilla in plantillasdis " ng-model="plantillaselec"
-                                  
-                                      
-                                      ng-change="cambiarplantilla(proveedors,plantillaselec)"></select>
+                              <select name="plantillaselec" ng-options="plantilla as plantilla.nombre for plantilla in plantillasdis " ng-model="proveedors.plantilla"        
+                               ng-change="cambiarplantilla(proveedors)"></select>
                                </p>
                               
-                    <textarea>  /.proveedors.textoenriquecido./ </textarea>
+                    <textarea id="/.proveedors.nombre./" ng-model="proveedors.plantilla.textoenriquecido">  </textarea>
                         
-                               
+                        este es el    /.proveedors.plantilla.textoenriquecido./  puuu
                          
                         </div>
                         
@@ -632,13 +626,13 @@ app.controller("myCtrl", function($scope,$http) {
                   </div>
                 </div>
               </div>  
-            aquei
+            
         </div>
         
          <div class="gridStyle" ng-grid="gridOptions"> 
             
                 
-          
+          aqueiaqueiaqueiaqueiaqueiaquei
                 
               
             
