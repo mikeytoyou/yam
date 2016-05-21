@@ -321,13 +321,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'alex\\yamBundle\\Controller\\PaqueteController::listadehotelesjsonAction',  '_route' => 'listadehotelesjson',);
                 }
 
-                // listadeproveedoresjson
-                if (rtrim($pathinfo, '/') === '/paquete/listadeproveedoresjson') {
-                    if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', 'listadeproveedoresjson');
+                if (0 === strpos($pathinfo, '/paquete/listadep')) {
+                    // listadeproveedoresjson
+                    if (rtrim($pathinfo, '/') === '/paquete/listadeproveedoresjson') {
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'listadeproveedoresjson');
+                        }
+
+                        return array (  '_controller' => 'alex\\yamBundle\\Controller\\PaqueteController::listadeproveedoresjsonAction',  '_route' => 'listadeproveedoresjson',);
                     }
 
-                    return array (  '_controller' => 'alex\\yamBundle\\Controller\\PaqueteController::listadeproveedoresjsonAction',  '_route' => 'listadeproveedoresjson',);
+                    // listadeplantillasjson
+                    if (rtrim($pathinfo, '/') === '/paquete/listadeplantillasjson') {
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'listadeplantillasjson');
+                        }
+
+                        return array (  '_controller' => 'alex\\yamBundle\\Controller\\PaqueteController::listadeplantillasjsonAction',  '_route' => 'listadeplantillasjson',);
+                    }
+
                 }
 
             }

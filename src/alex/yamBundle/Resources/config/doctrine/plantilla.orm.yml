@@ -1,0 +1,25 @@
+alex\yamBundle\Entity\plantilla:
+    type: entity
+    table: plantilla
+    repositoryClass: alex\yamBundle\Repository\plantillaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        textoenriquecido:
+            type: string
+            length: '1000'
+        fechacreada:
+            type: date
+            nullable: true
+        tipo:
+            type: string
+            length: '45'
+            nullable: true
+        nombre:
+            type: string
+            length: '40'
+    lifecycleCallbacks: {  }

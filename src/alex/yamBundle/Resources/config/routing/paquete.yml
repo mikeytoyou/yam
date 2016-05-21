@@ -40,3 +40,8 @@ listadehotelesjson:
 listadeproveedoresjson:
     path:     /listadeproveedoresjson/
     defaults: { _controller: "alexyamBundle:Paquete:listadeproveedoresjson" } 
+   
+
+listadeplantillasjson:
+    path:     /listadeplantillasjson/
+    defaults: { _controller: "alexyamBundle:Paquete:listadeplantillasjson" } 

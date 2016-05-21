@@ -15,8 +15,8 @@ class __TwigTemplate_b974473fc6a22355ca7b2f4b8c0520878f49696e69e77fcaf01ac78e416
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e = $this->env->getExtension("native_profiler");
-        $__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e->enter($__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
+        $__internal_d3c0cc81dccac7597ab1c28c40dc5ad9caa3e9fae005a840d8b020895debc81e = $this->env->getExtension("native_profiler");
+        $__internal_d3c0cc81dccac7597ab1c28c40dc5ad9caa3e9fae005a840d8b020895debc81e->enter($__internal_d3c0cc81dccac7597ab1c28c40dc5ad9caa3e9fae005a840d8b020895debc81e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
 
         // line 1
         echo "<link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css\">
@@ -48,9 +48,19 @@ class __TwigTemplate_b974473fc6a22355ca7b2f4b8c0520878f49696e69e77fcaf01ac78e416
  <link rel=\"stylesheet\" href=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css\"> 
 <script src=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js\"></script>
 
+<link href=\"../../../../web/bundles/wysy/editor.css\" rel=\"stylesheet\" type=\"text/css\"/>
+<script src=\"../../../../web/bundles/wysy/editor.js\" type=\"text/javascript\"></script>
+
+<script src=\"../../../../web/bundles/tinymce-dist/jquery.tinymce.js\" type=\"text/javascript\"></script>
+<script src=\"../../../../web/bundles/tinymce-dist/tinymce.jquery.js\" type=\"text/javascript\"></script>
+
+
+  <script type=\"text/javascript\" >
+    </script>
+  <link href=\"../../../../web/bundles/tinymce/plugins/visualblocks/css/visualblocks.css\" rel=\"stylesheet\" type=\"text/css\"/>
 <script  type=\"text/javascript\"  >
  var dep=['ngMaterial', 'ngMessages', 'material.svgAssetsCache'];
-    var app = angular.module(\"myApp\",['ngMaterial', 'ngMessages', 'material.svgAssetsCache']);
+    var app = angular.module(\"myApp\",[]);
     app.config(function(\$interpolateProvider){
     \$interpolateProvider.startSymbol('/.').endSymbol('./');
     
@@ -80,6 +90,8 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
                      {name: \"Jacob\", age: 27},
                      {name: \"Nephi\", age: 29},
                      {name: \"Enos\", age: 34}];
+         \$scope.plantillasdis=[];
+       \$scope.plantillaselec={};
     \$scope.gridOptions = { data: \$scope.myData };
     
    
@@ -87,7 +99,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
          \$scope.getlistadehoteles=function(){
              
               \$http.get(\"";
-        // line 68
+        // line 80
         echo $this->env->getExtension('routing')->getUrl("listadehotelesjson");
         echo "\")
                             .success(function(respuesta){
@@ -99,7 +111,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
          \$scope.getlistadeproveedores=function(){
              
               \$http.get(\"";
-        // line 77
+        // line 89
         echo $this->env->getExtension('routing')->getUrl("listadeproveedoresjson");
         echo "\")
                             .success(function(respuesta){
@@ -108,9 +120,22 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
                             });
          };
          
+             \$scope.getlistadeplantillas=function(){
+             
+              \$http.get(\"";
+        // line 98
+        echo $this->env->getExtension('routing')->getUrl("listadeplantillasjson");
+        echo "\")
+                            .success(function(respuesta){
+                                console.log ( respuesta );
+                            \$scope.plantillasdis=   respuesta;
+                            });
+         };
+        
+         
          \$scope.configurarEnvio=function(){
              \$scope.getlistadeproveedores();
-              
+              \$scope.getlistadeplantillas();
          };
          
          
@@ -202,7 +227,28 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
           \t
 
   }
-     }
+     };
+     
+       \$scope.cambiarplantilla= function(proveedor,plantilla){
+         var pro=\$scope.provedorselecinados.indexOf(proveedor);
+         if(pro>=0 ){
+          \$scope.provedorselecinados[pro].textoenriquecido=plantilla.textoenriquecido;
+          \t  tinymce.init({
+  selector: 'textarea',
+  height: 500,
+  plugins: 'visualblocks',
+  content_css: 'css/content.css',
+ 
+  visualblocks_default_state: true,
+  end_container_on_empty_block: true,
+  content_css: [
+    '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+    '//www.tinymce.com/css/codepen.min.css'
+  ]
+ });
+            }
+     };
+     
      
      
      \$scope.paquete.guardar=function(){
@@ -210,7 +256,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
                 
 
                 \$http.post(\"";
-        // line 185
+        // line 228
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getUrl("paqueteconstructormay", array("idcliente" => (isset($context["cliente"]) ? $context["cliente"] : $this->getContext($context, "cliente")))), "html", null, true);
         echo "\", \$scope.paquete)
                             .success(function(respuesta){
@@ -557,6 +603,60 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
                           </tbody>
                     
                         </table>
+                      
+                      
+                      
+                      
+                      
+                      
+                         <ul class=\"nav nav-tabs\">
+                        <li class=\"active\"><a data-toggle=\"tab\" href=\"#home\">Home</a></li>
+                        <li  ng-repeat=\"proveedors in provedorselecinados\"><a data-toggle=\"tab\" href=\"#menu/.proveedors.nombre./\">/.proveedors.nombre./</a></li>
+                       
+                      </ul>
+
+                      <div class=\"tab-content\">
+                        <div id=\"home\" class=\"tab-pane fade in active\">
+                          <h3>HOME</h3>
+                          <p>Some content.</p>
+                        </div>
+                          
+                          
+                        <div id=\"menu/.proveedors.nombre./\" class=\"tab-pane \"  ng-repeat=\"proveedors in provedorselecinados\">
+                            
+                            
+                          <h3>sleccione una plantilla para /.proveedors.nombre./</h3>
+                          
+                          
+                          <p>
+                              <select name=\"plantillaselec\" ng-options=\"plantilla as plantilla.nombre for plantilla in plantillasdis \" ng-model=\"plantillaselec\"
+                                  
+                                      
+                                      ng-change=\"cambiarplantilla(proveedors,plantillaselec)\"></select>
+                               </p>
+                              
+                    <textarea>  /.proveedors.textoenriquecido./ </textarea>
+                        
+                               
+                         
+                        </div>
+                        
+                      </div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
 
                   </div>
                   <div class=\"modal-footer\">
@@ -587,7 +687,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
   
 ";
         
-        $__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e->leave($__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e_prof);
+        $__internal_d3c0cc81dccac7597ab1c28c40dc5ad9caa3e9fae005a840d8b020895debc81e->leave($__internal_d3c0cc81dccac7597ab1c28c40dc5ad9caa3e9fae005a840d8b020895debc81e_prof);
 
     }
 
@@ -603,7 +703,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 
     public function getDebugInfo()
     {
-        return array (  214 => 185,  103 => 77,  91 => 68,  22 => 1,);
+        return array (  260 => 228,  127 => 98,  115 => 89,  103 => 80,  22 => 1,);
     }
 }
 /* <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">*/
@@ -635,9 +735,19 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*  <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> */
 /* <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>*/
 /* */
+/* <link href="../../../../web/bundles/wysy/editor.css" rel="stylesheet" type="text/css"/>*/
+/* <script src="../../../../web/bundles/wysy/editor.js" type="text/javascript"></script>*/
+/* */
+/* <script src="../../../../web/bundles/tinymce-dist/jquery.tinymce.js" type="text/javascript"></script>*/
+/* <script src="../../../../web/bundles/tinymce-dist/tinymce.jquery.js" type="text/javascript"></script>*/
+/* */
+/* */
+/*   <script type="text/javascript" >*/
+/*     </script>*/
+/*   <link href="../../../../web/bundles/tinymce/plugins/visualblocks/css/visualblocks.css" rel="stylesheet" type="text/css"/>*/
 /* <script  type="text/javascript"  >*/
 /*  var dep=['ngMaterial', 'ngMessages', 'material.svgAssetsCache'];*/
-/*     var app = angular.module("myApp",['ngMaterial', 'ngMessages', 'material.svgAssetsCache']);*/
+/*     var app = angular.module("myApp",[]);*/
 /*     app.config(function($interpolateProvider){*/
 /*     $interpolateProvider.startSymbol('/.').endSymbol('./');*/
 /*     */
@@ -667,6 +777,8 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*                      {name: "Jacob", age: 27},*/
 /*                      {name: "Nephi", age: 29},*/
 /*                      {name: "Enos", age: 34}];*/
+/*          $scope.plantillasdis=[];*/
+/*        $scope.plantillaselec={};*/
 /*     $scope.gridOptions = { data: $scope.myData };*/
 /*     */
 /*    */
@@ -689,9 +801,19 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*                             });*/
 /*          };*/
 /*          */
+/*              $scope.getlistadeplantillas=function(){*/
+/*              */
+/*               $http.get("{{url('listadeplantillasjson')}}")*/
+/*                             .success(function(respuesta){*/
+/*                                 console.log ( respuesta );*/
+/*                             $scope.plantillasdis=   respuesta;*/
+/*                             });*/
+/*          };*/
+/*         */
+/*          */
 /*          $scope.configurarEnvio=function(){*/
 /*              $scope.getlistadeproveedores();*/
-/*               */
+/*               $scope.getlistadeplantillas();*/
 /*          };*/
 /*          */
 /*          */
@@ -783,7 +905,28 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*           	*/
 /* */
 /*   }*/
-/*      }*/
+/*      };*/
+/*      */
+/*        $scope.cambiarplantilla= function(proveedor,plantilla){*/
+/*          var pro=$scope.provedorselecinados.indexOf(proveedor);*/
+/*          if(pro>=0 ){*/
+/*           $scope.provedorselecinados[pro].textoenriquecido=plantilla.textoenriquecido;*/
+/*           	  tinymce.init({*/
+/*   selector: 'textarea',*/
+/*   height: 500,*/
+/*   plugins: 'visualblocks',*/
+/*   content_css: 'css/content.css',*/
+/*  */
+/*   visualblocks_default_state: true,*/
+/*   end_container_on_empty_block: true,*/
+/*   content_css: [*/
+/*     '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',*/
+/*     '//www.tinymce.com/css/codepen.min.css'*/
+/*   ]*/
+/*  });*/
+/*             }*/
+/*      };*/
+/*      */
 /*      */
 /*      */
 /*      $scope.paquete.guardar=function(){*/
@@ -1135,6 +1278,60 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*                           </tbody>*/
 /*                     */
 /*                         </table>*/
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                          <ul class="nav nav-tabs">*/
+/*                         <li class="active"><a data-toggle="tab" href="#home">Home</a></li>*/
+/*                         <li  ng-repeat="proveedors in provedorselecinados"><a data-toggle="tab" href="#menu/.proveedors.nombre./">/.proveedors.nombre./</a></li>*/
+/*                        */
+/*                       </ul>*/
+/* */
+/*                       <div class="tab-content">*/
+/*                         <div id="home" class="tab-pane fade in active">*/
+/*                           <h3>HOME</h3>*/
+/*                           <p>Some content.</p>*/
+/*                         </div>*/
+/*                           */
+/*                           */
+/*                         <div id="menu/.proveedors.nombre./" class="tab-pane "  ng-repeat="proveedors in provedorselecinados">*/
+/*                             */
+/*                             */
+/*                           <h3>sleccione una plantilla para /.proveedors.nombre./</h3>*/
+/*                           */
+/*                           */
+/*                           <p>*/
+/*                               <select name="plantillaselec" ng-options="plantilla as plantilla.nombre for plantilla in plantillasdis " ng-model="plantillaselec"*/
+/*                                   */
+/*                                       */
+/*                                       ng-change="cambiarplantilla(proveedors,plantillaselec)"></select>*/
+/*                                </p>*/
+/*                               */
+/*                     <textarea>  /.proveedors.textoenriquecido./ </textarea>*/
+/*                         */
+/*                                */
+/*                          */
+/*                         </div>*/
+/*                         */
+/*                       </div>*/
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
+/*                       */
 /* */
 /*                   </div>*/
 /*                   <div class="modal-footer">*/

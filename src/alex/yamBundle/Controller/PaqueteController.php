@@ -237,7 +237,7 @@ class PaqueteController extends Controller
      
     }
     
-          public function listadeproveedoresjsonAction()
+    public function listadeproveedoresjsonAction()
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -251,6 +251,20 @@ class PaqueteController extends Controller
     
        return new \Symfony\Component\HttpFoundation\Response(json_encode($proveedoreslista));
     }
-
     
+
+      public function listadeplantillasjsonAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plantillas = $em->getRepository('alexyamBundle:plantilla')->findAll();
+        $plantillaslista=array();
+        foreach ($plantillas as $plantilla){
+            
+            array_push($plantillaslista, array('nombre'=>$plantilla->getNombre(),'textoenriquecido'=>$plantilla->getTextoenriquecido()));
+     
+    }
+    
+       return new \Symfony\Component\HttpFoundation\Response(json_encode($plantillaslista));
+    }
 }
