@@ -164,4 +164,32 @@ class TrSupplier
     {
         return $this->rucSupplier;
     }
+    /**
+     * @var string
+     */
+    private $emailSupplier;
+
+
+    /**
+     * Set emailSupplier
+     *
+     * @param string $emailSupplier
+     * @return TrSupplier
+     */
+    public function setEmailSupplier($emailSupplier)
+    {
+        $this->emailSupplier = $emailSupplier;
+
+        return $this;
+    }
+
+    /**
+     * Get emailSupplier
+     *
+     * @return string 
+     */
+    public function getEmailSupplier()
+    {
+        return $this->emailSupplier;
+    }
 }

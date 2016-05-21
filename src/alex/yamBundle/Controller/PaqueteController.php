@@ -237,4 +237,20 @@ class PaqueteController extends Controller
      
     }
     
+          public function listadeproveedoresjsonAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $proveedores = $em->getRepository('alexyamBundle:TrSupplier')->findAll();
+        $proveedoreslista=array();
+        foreach ($proveedores as $proveedor){
+            
+            array_push($proveedoreslista, array('nombre'=>$proveedor->getName(),'email'=>$proveedor->getEmailSupplier()));
+     
+    }
+    
+       return new \Symfony\Component\HttpFoundation\Response(json_encode($proveedoreslista));
+    }
+
+    
 }

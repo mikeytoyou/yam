@@ -1,6 +1,10 @@
 
-    var dep=['ngGrid'];
-    var app = angular.module("myApp",[]);
+
+
+
+
+    var dep=['ngMaterial', 'ngMessages', 'material.svgAssetsCache'];
+    var app = angular.module("myApp",['ngMaterial', 'ngMessages', 'material.svgAssetsCache']);
     app.config(function($interpolateProvider){
     $interpolateProvider.startSymbol('/.').endSymbol('./');
     

@@ -35,3 +35,8 @@ paqueteconstructormay:
 listadehotelesjson:
     path:     /listadehotelesjson/
     defaults: { _controller: "alexyamBundle:Paquete:listadehotelesjson" } 
+    
+    
+listadeproveedoresjson:
+    path:     /listadeproveedoresjson/
+    defaults: { _controller: "alexyamBundle:Paquete:listadeproveedoresjson" } 

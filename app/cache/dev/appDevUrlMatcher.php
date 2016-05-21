@@ -311,13 +311,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
-            // listadehotelesjson
-            if (rtrim($pathinfo, '/') === '/paquete/listadehotelesjson') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'listadehotelesjson');
+            if (0 === strpos($pathinfo, '/paquete/listade')) {
+                // listadehotelesjson
+                if (rtrim($pathinfo, '/') === '/paquete/listadehotelesjson') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'listadehotelesjson');
+                    }
+
+                    return array (  '_controller' => 'alex\\yamBundle\\Controller\\PaqueteController::listadehotelesjsonAction',  '_route' => 'listadehotelesjson',);
                 }
 
-                return array (  '_controller' => 'alex\\yamBundle\\Controller\\PaqueteController::listadehotelesjsonAction',  '_route' => 'listadehotelesjson',);
+                // listadeproveedoresjson
+                if (rtrim($pathinfo, '/') === '/paquete/listadeproveedoresjson') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'listadeproveedoresjson');
+                    }
+
+                    return array (  '_controller' => 'alex\\yamBundle\\Controller\\PaqueteController::listadeproveedoresjsonAction',  '_route' => 'listadeproveedoresjson',);
+                }
+
             }
 
             if (0 === strpos($pathinfo, '/paqueteporcliente')) {

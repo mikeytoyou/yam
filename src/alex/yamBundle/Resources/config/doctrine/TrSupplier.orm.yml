@@ -34,4 +34,10 @@ alex\yamBundle\Entity\TrSupplier:
             length: 25
             fixed: false
             column: ruc_supplier
+        emailSupplier:
+            type: string
+            nullable: true
+            length: 25
+            fixed: false
+            column: email_supplier
     lifecycleCallbacks: {  }

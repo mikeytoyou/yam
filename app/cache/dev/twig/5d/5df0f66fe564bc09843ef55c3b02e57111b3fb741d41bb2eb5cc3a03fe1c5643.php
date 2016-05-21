@@ -15,8 +15,8 @@ class __TwigTemplate_b974473fc6a22355ca7b2f4b8c0520878f49696e69e77fcaf01ac78e416
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48 = $this->env->getExtension("native_profiler");
-        $__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48->enter($__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
+        $__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e = $this->env->getExtension("native_profiler");
+        $__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e->enter($__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
 
         // line 1
         echo "<link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css\">
@@ -48,10 +48,15 @@ class __TwigTemplate_b974473fc6a22355ca7b2f4b8c0520878f49696e69e77fcaf01ac78e416
  <link rel=\"stylesheet\" href=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css\"> 
 <script src=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js\"></script>
 
-<script  type=\"text/javascript\" src=\"";
-        // line 30
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/js/main.js"), "html", null, true);
-        echo "\"  > </script>
+<script  type=\"text/javascript\"  >
+ var dep=['ngMaterial', 'ngMessages', 'material.svgAssetsCache'];
+    var app = angular.module(\"myApp\",['ngMaterial', 'ngMessages', 'material.svgAssetsCache']);
+    app.config(function(\$interpolateProvider){
+    \$interpolateProvider.startSymbol('/.').endSymbol('./');
+    
+})
+</script>
+
 
 
  
@@ -68,25 +73,47 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
         \$scope.paquete.rutas=[];
          \$scope.paquete.incluyes=[];
         \$scope.paquete.lugarnuevo='';
-         
+             \$scope.proveedores=[{nombre:\"juan\",id:'12'},{nombre:\"lucas\",id:'11'}];
+        \$scope.provedorselecinados=[];
          \$scope.myData = [{name: \"Moroni\", age: 50},
                      {name: \"Tiancum\", age: 43},
                      {name: \"Jacob\", age: 27},
                      {name: \"Nephi\", age: 29},
                      {name: \"Enos\", age: 34}];
-    \$scope.gridOptions = { data: 'myData' };
+    \$scope.gridOptions = { data: \$scope.myData };
+    
+   
         
          \$scope.getlistadehoteles=function(){
              
               \$http.get(\"";
-        // line 57
+        // line 68
         echo $this->env->getExtension('routing')->getUrl("listadehotelesjson");
         echo "\")
                             .success(function(respuesta){
                                 console.log ( respuesta );
                             \$scope.paquete.hoteles=   respuesta;
                             });
-         }
+         };
+         
+         \$scope.getlistadeproveedores=function(){
+             
+              \$http.get(\"";
+        // line 77
+        echo $this->env->getExtension('routing')->getUrl("listadeproveedoresjson");
+        echo "\")
+                            .success(function(respuesta){
+                                console.log ( respuesta );
+                            \$scope.proveedores=   respuesta;
+                            });
+         };
+         
+         \$scope.configurarEnvio=function(){
+             \$scope.getlistadeproveedores();
+              
+         };
+         
+         
         \$scope.paquete.estancias=[];
        \$scope.paquete.nuevaestancia={};
         \$scope.paquete.duraciones=[];
@@ -111,7 +138,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
        \$scope.paquete.rutaselec ={'numero':\$scope.paquete.rutas.length+1,'lugares':[],'texto':''}
         \$scope.paquete.rutas.push(\$scope.paquete.rutaselec);
         
-    }
+    };
     
     
     
@@ -119,7 +146,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
             \$scope.paquete.incluyes.push(\$scope.paquete.nuevoincluye);
             \$scope.paquete.nuevoincluye={};
       
-    }
+    };
      \$scope.paquete.eliminarlugar=function (lugar,ruta){
         
        var pos= \$scope.paquete.rutas[\$scope.paquete.rutas.indexOf(\$scope.paquete.rutaselec)].lugares.indexOf(lugar);
@@ -160,12 +187,30 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
         \$scope.paquete.nuevaduracion={};
      };
      
+     \$scope.agregar_proveedor= function(proveedor){
+         if(\$scope.provedorselecinados.indexOf(proveedor)<0 ){
+          \$scope.provedorselecinados.push(proveedor);
+  }
+     }
+     
+     
+    
+     \$scope.quitar_proveedor= function(proveedor){
+         var pro=\$scope.provedorselecinados.indexOf(proveedor);
+         if(pro>=0 ){
+          \$scope.provedorselecinados.splice(pro,1);
+          \t
+
+  }
+     }
+     
+     
      \$scope.paquete.guardar=function(){
          
                 
 
                 \$http.post(\"";
-        // line 140
+        // line 185
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getUrl("paqueteconstructormay", array("idcliente" => (isset($context["cliente"]) ? $context["cliente"] : $this->getContext($context, "cliente")))), "html", null, true);
         echo "\", \$scope.paquete)
                             .success(function(respuesta){
@@ -179,7 +224,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
     
 };
 });
+
+
    \$(function() {
+   
     \$( \"#fechainicio\" ).datepicker({ dateFormat: 'yy-mm-dd' });
     \$( \"#fechafin\" ).datepicker({ dateFormat: 'yy-mm-dd' });
     
@@ -435,14 +483,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
             
       
             
-            <div class=\"gridStyle\" ng-grid=\"gridOptions\"> 
-            
-                
-                
-                
-              
-            
-            </div>
+           
               <table class=\"table table-bordered  \" >
                   <thead>
                     <tr >
@@ -484,8 +525,58 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
     
 </div>
     
-  
-        <button type=\"submit\">  Guardar y hacer correo</button>
+        <div class=\"modal-footer\">
+            
+          <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#configuracionenvio\" ng-click=\"configurarEnvio()\">Guardar y hacer correo</button>
+     
+        </div>
+        
+        <div id=\"configuracionenvio\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+           <div class=\"modal-dialog\" role=\"document\">
+                <div class=\"modal-content\">
+                  <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                      <span aria-hidden=\"true\">&times;</span>
+                    </button>
+                    <h4 class=\"modal-title\" id=\"myModalLabel\">Configure los mayoristas a enviar </h4>
+                  </div>
+                  <div class=\"modal-body\">
+                      
+                      <select name=\"prevedorselec\" ng-options=\"proveedor as proveedor.nombre for proveedor in proveedores \" ng-model=\"prevedorselec\"></select>
+                      <button type=\"button\" class=\"btn btn-default\" ng-click=\"agregar_proveedor(prevedorselec)\">Agregar a la lista</button>
+                      <table class=\"table table-bordered  \" >
+                        <thead>
+                          <tr >
+                              <th class=\"col-md-2\">Nombre</th><th >Correo electronico </th><th ></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr ng-repeat=\"proveedors in provedorselecinados\" >
+                              <td class=\"col-md-2 \">/.proveedors.nombre./</td><td >/.proveedors.email./</td><td > <button type=\"button\" class=\"btn btn-default\" ng-click=\"quitar_proveedor(proveedors)\">Quitar de la lista</button></td>
+                          </tr>
+                          </tbody>
+                    
+                        </table>
+
+                  </div>
+                  <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+                    <button type=\"button\" class=\"btn btn-primary\">Guardar y enviar</button>
+                  </div>
+                </div>
+              </div>  
+            aquei
+        </div>
+        
+         <div class=\"gridStyle\" ng-grid=\"gridOptions\"> 
+            
+                
+          
+                
+              
+            
+            </div>
+     
      
 </form>
   
@@ -496,7 +587,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
   
 ";
         
-        $__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48->leave($__internal_e0ac2ec9b10a60f411ec4a96c9ad6010831eaa4e10601aa59d5eac89e1edee48_prof);
+        $__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e->leave($__internal_6210ce8b9d0437eaae71e92bdc760d44a8ca4d6a7c1049d6028dcf9d5aff6c3e_prof);
 
     }
 
@@ -512,7 +603,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 
     public function getDebugInfo()
     {
-        return array (  169 => 140,  83 => 57,  53 => 30,  22 => 1,);
+        return array (  214 => 185,  103 => 77,  91 => 68,  22 => 1,);
     }
 }
 /* <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">*/
@@ -544,7 +635,15 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*  <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> */
 /* <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>*/
 /* */
-/* <script  type="text/javascript" src="{{ asset('bundles/js/main.js') }}"  > </script>*/
+/* <script  type="text/javascript"  >*/
+/*  var dep=['ngMaterial', 'ngMessages', 'material.svgAssetsCache'];*/
+/*     var app = angular.module("myApp",['ngMaterial', 'ngMessages', 'material.svgAssetsCache']);*/
+/*     app.config(function($interpolateProvider){*/
+/*     $interpolateProvider.startSymbol('/.').endSymbol('./');*/
+/*     */
+/* })*/
+/* </script>*/
+/* */
 /* */
 /* */
 /*  */
@@ -561,13 +660,16 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*         $scope.paquete.rutas=[];*/
 /*          $scope.paquete.incluyes=[];*/
 /*         $scope.paquete.lugarnuevo='';*/
-/*          */
+/*              $scope.proveedores=[{nombre:"juan",id:'12'},{nombre:"lucas",id:'11'}];*/
+/*         $scope.provedorselecinados=[];*/
 /*          $scope.myData = [{name: "Moroni", age: 50},*/
 /*                      {name: "Tiancum", age: 43},*/
 /*                      {name: "Jacob", age: 27},*/
 /*                      {name: "Nephi", age: 29},*/
 /*                      {name: "Enos", age: 34}];*/
-/*     $scope.gridOptions = { data: 'myData' };*/
+/*     $scope.gridOptions = { data: $scope.myData };*/
+/*     */
+/*    */
 /*         */
 /*          $scope.getlistadehoteles=function(){*/
 /*              */
@@ -576,7 +678,23 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*                                 console.log ( respuesta );*/
 /*                             $scope.paquete.hoteles=   respuesta;*/
 /*                             });*/
-/*          }*/
+/*          };*/
+/*          */
+/*          $scope.getlistadeproveedores=function(){*/
+/*              */
+/*               $http.get("{{url('listadeproveedoresjson')}}")*/
+/*                             .success(function(respuesta){*/
+/*                                 console.log ( respuesta );*/
+/*                             $scope.proveedores=   respuesta;*/
+/*                             });*/
+/*          };*/
+/*          */
+/*          $scope.configurarEnvio=function(){*/
+/*              $scope.getlistadeproveedores();*/
+/*               */
+/*          };*/
+/*          */
+/*          */
 /*         $scope.paquete.estancias=[];*/
 /*        $scope.paquete.nuevaestancia={};*/
 /*         $scope.paquete.duraciones=[];*/
@@ -601,7 +719,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*        $scope.paquete.rutaselec ={'numero':$scope.paquete.rutas.length+1,'lugares':[],'texto':''}*/
 /*         $scope.paquete.rutas.push($scope.paquete.rutaselec);*/
 /*         */
-/*     }*/
+/*     };*/
 /*     */
 /*     */
 /*     */
@@ -609,7 +727,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*             $scope.paquete.incluyes.push($scope.paquete.nuevoincluye);*/
 /*             $scope.paquete.nuevoincluye={};*/
 /*       */
-/*     }*/
+/*     };*/
 /*      $scope.paquete.eliminarlugar=function (lugar,ruta){*/
 /*         */
 /*        var pos= $scope.paquete.rutas[$scope.paquete.rutas.indexOf($scope.paquete.rutaselec)].lugares.indexOf(lugar);*/
@@ -650,6 +768,24 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*         $scope.paquete.nuevaduracion={};*/
 /*      };*/
 /*      */
+/*      $scope.agregar_proveedor= function(proveedor){*/
+/*          if($scope.provedorselecinados.indexOf(proveedor)<0 ){*/
+/*           $scope.provedorselecinados.push(proveedor);*/
+/*   }*/
+/*      }*/
+/*      */
+/*      */
+/*     */
+/*      $scope.quitar_proveedor= function(proveedor){*/
+/*          var pro=$scope.provedorselecinados.indexOf(proveedor);*/
+/*          if(pro>=0 ){*/
+/*           $scope.provedorselecinados.splice(pro,1);*/
+/*           	*/
+/* */
+/*   }*/
+/*      }*/
+/*      */
+/*      */
 /*      $scope.paquete.guardar=function(){*/
 /*          */
 /*                 */
@@ -666,7 +802,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*     */
 /* };*/
 /* });*/
+/* */
+/* */
 /*    $(function() {*/
+/*    */
 /*     $( "#fechainicio" ).datepicker({ dateFormat: 'yy-mm-dd' });*/
 /*     $( "#fechafin" ).datepicker({ dateFormat: 'yy-mm-dd' });*/
 /*     */
@@ -922,14 +1061,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*             */
 /*       */
 /*             */
-/*             <div class="gridStyle" ng-grid="gridOptions"> */
-/*             */
-/*                 */
-/*                 */
-/*                 */
-/*               */
-/*             */
-/*             </div>*/
+/*            */
 /*               <table class="table table-bordered  " >*/
 /*                   <thead>*/
 /*                     <tr >*/
@@ -971,8 +1103,58 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*     */
 /* </div>*/
 /*     */
-/*   */
-/*         <button type="submit">  Guardar y hacer correo</button>*/
+/*         <div class="modal-footer">*/
+/*             */
+/*           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#configuracionenvio" ng-click="configurarEnvio()">Guardar y hacer correo</button>*/
+/*      */
+/*         </div>*/
+/*         */
+/*         <div id="configuracionenvio" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
+/*            <div class="modal-dialog" role="document">*/
+/*                 <div class="modal-content">*/
+/*                   <div class="modal-header">*/
+/*                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">*/
+/*                       <span aria-hidden="true">&times;</span>*/
+/*                     </button>*/
+/*                     <h4 class="modal-title" id="myModalLabel">Configure los mayoristas a enviar </h4>*/
+/*                   </div>*/
+/*                   <div class="modal-body">*/
+/*                       */
+/*                       <select name="prevedorselec" ng-options="proveedor as proveedor.nombre for proveedor in proveedores " ng-model="prevedorselec"></select>*/
+/*                       <button type="button" class="btn btn-default" ng-click="agregar_proveedor(prevedorselec)">Agregar a la lista</button>*/
+/*                       <table class="table table-bordered  " >*/
+/*                         <thead>*/
+/*                           <tr >*/
+/*                               <th class="col-md-2">Nombre</th><th >Correo electronico </th><th ></th>*/
+/*                           </tr>*/
+/*                           </thead>*/
+/*                           <tbody>*/
+/*                           <tr ng-repeat="proveedors in provedorselecinados" >*/
+/*                               <td class="col-md-2 ">/.proveedors.nombre./</td><td >/.proveedors.email./</td><td > <button type="button" class="btn btn-default" ng-click="quitar_proveedor(proveedors)">Quitar de la lista</button></td>*/
+/*                           </tr>*/
+/*                           </tbody>*/
+/*                     */
+/*                         </table>*/
+/* */
+/*                   </div>*/
+/*                   <div class="modal-footer">*/
+/*                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>*/
+/*                     <button type="button" class="btn btn-primary">Guardar y enviar</button>*/
+/*                   </div>*/
+/*                 </div>*/
+/*               </div>  */
+/*             aquei*/
+/*         </div>*/
+/*         */
+/*          <div class="gridStyle" ng-grid="gridOptions"> */
+/*             */
+/*                 */
+/*           */
+/*                 */
+/*               */
+/*             */
+/*             </div>*/
+/*      */
 /*      */
 /* </form>*/
 /*   */
