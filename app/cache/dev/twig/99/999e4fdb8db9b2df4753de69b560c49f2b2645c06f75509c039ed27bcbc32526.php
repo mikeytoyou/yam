@@ -15,18 +15,11 @@ class __TwigTemplate_df9cb88a00841c75bd6937c670aeea5ba57e71c3d6ebe17a151bf2114d1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a39d0266b0a0be9504fef5a9587259874dd0ebd9ebc09f7a75cc76b89827eea7 = $this->env->getExtension("native_profiler");
-        $__internal_a39d0266b0a0be9504fef5a9587259874dd0ebd9ebc09f7a75cc76b89827eea7->enter($__internal_a39d0266b0a0be9504fef5a9587259874dd0ebd9ebc09f7a75cc76b89827eea7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
+        $__internal_b902a17e685d35cd092aba4281bd317c2f1583177069555fbd9e747585875a6d = $this->env->getExtension("native_profiler");
+        $__internal_b902a17e685d35cd092aba4281bd317c2f1583177069555fbd9e747585875a6d->enter($__internal_b902a17e685d35cd092aba4281bd317c2f1583177069555fbd9e747585875a6d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "paquete/constructorpaquete.html.twig"));
 
         // line 1
         echo "<link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css\">
-
-<script src=\"//code.jquery.com/jquery-1.10.2.js\"></script>
-
-<script src=\"//code.jquery.com/ui/1.11.4/jquery-ui.js\"></script>
-
-<script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js\"></script>
-
 <!-- Latest compiled and minified CSS -->
 <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" integrity=\"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7\" crossorigin=\"anonymous\">
 
@@ -34,31 +27,84 @@ class __TwigTemplate_df9cb88a00841c75bd6937c670aeea5ba57e71c3d6ebe17a151bf2114d1
 <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css\" integrity=\"sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r\" crossorigin=\"anonymous\">
 
 
-<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\" integrity=\"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\" crossorigin=\"anonymous\"></script>
+<script src=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/jquery/dist/jquery.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+
+<script src=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/jquery-ui/jquery-ui.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+
+<script src=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/angular/angular.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+
+<script src=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/bootstrap/dist/js/bootstrap.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+
+<script src=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/angular-material/angular-material.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+
 
 
 <!-- Angular Material Library -->
-  <script src=\"http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js\"></script>
- <link rel=\"stylesheet\" href=\"http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css\">
-<script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js\"></script>
-  <script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js\"></script>
-  <script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js\"></script>
+<link href=\"";
+        // line 22
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/angular-material/angular-material.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\"/>
 
- 
+
+ <script src=\"";
+        // line 25
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/angular-animate/angular-animate.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+
  <link rel=\"stylesheet\" href=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css\"> 
 <script src=\"https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js\"></script>
 
+ <script src=\"";
+        // line 30
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/angular-messages/angular-messages.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+  <script src=\"";
+        // line 31
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/angular-aria/angular-aria.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+  
+  <link href=\"";
+        // line 33
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/angular-ui-grid/ui-grid.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\"/>
+  <script src=\"";
+        // line 34
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/angular/bower_components/angular-ui-grid/ui-grid.min.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+  
+  <script src=\"";
+        // line 36
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/tinymce/jscripts/tiny_mce/jquery.tinymce.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+  <script src=\"";
+        // line 37
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/tinymce/jscripts/tiny_mce/tiny_mce.js"), "html", null, true);
+        echo "\" type=\"text/javascript\"></script>
+ 
 
 
-<script src=\"../../../../web/bundles/tinymce/tinymce.min.js\" type=\"text/javascript\"></script>
 
+ 
 
-  <script type=\"text/javascript\" >
-    </script>
-  <link href=\"../../../../web/bundles/tinymce/plugins/visualblocks/css/visualblocks.css\" rel=\"stylesheet\" type=\"text/css\"/>
+  
 <script  type=\"text/javascript\"  >
- var dep=['ngMaterial', 'ngMessages', 'material.svgAssetsCache'];
-    var app = angular.module(\"myApp\",[]);
+ var dep=['ngMaterial','ui.grid'];
+    var app = angular.module(\"myApp\",dep);
     app.config(function(\$interpolateProvider){
     \$interpolateProvider.startSymbol('/.').endSymbol('./');
     
@@ -66,6 +112,10 @@ class __TwigTemplate_df9cb88a00841c75bd6937c670aeea5ba57e71c3d6ebe17a151bf2114d1
 </script>
 
 
+<link href=\"";
+        // line 55
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/css/estilos.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\"/>
 
  
  
@@ -76,28 +126,27 @@ class __TwigTemplate_df9cb88a00841c75bd6937c670aeea5ba57e71c3d6ebe17a151bf2114d1
 
 app.controller(\"myCtrl\", function(\$scope,\$http) {
    
-   
+    \$scope.actualizartabs=function(index,provedorselecinados){ if(index==provedorselecinados.length-1){ \$('#contentab'+index).trigger('click');    } 
+        
+        
+    };
     \$scope.paquete={};
         \$scope.paquete.rutas=[];
          \$scope.paquete.incluyes=[];
         \$scope.paquete.lugarnuevo='';
-             \$scope.proveedores=[{nombre:\"juan\",id:'12'},{nombre:\"lucas\",id:'11'}];
+            
         \$scope.provedorselecinados=[];
-         \$scope.myData = [{name: \"Moroni\", age: 50},
-                     {name: \"Tiancum\", age: 43},
-                     {name: \"Jacob\", age: 27},
-                     {name: \"Nephi\", age: 29},
-                     {name: \"Enos\", age: 34}];
+       
          \$scope.plantillasdis=[];
        \$scope.plantillaselec={};
-    \$scope.gridOptions = { data: \$scope.myData };
+
     
    
         
          \$scope.getlistadehoteles=function(){
              
               \$http.get(\"";
-        // line 78
+        // line 85
         echo $this->env->getExtension('routing')->getUrl("listadehotelesjson");
         echo "\")
                             .success(function(respuesta){
@@ -109,7 +158,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
          \$scope.getlistadeproveedores=function(){
              
               \$http.get(\"";
-        // line 87
+        // line 94
         echo $this->env->getExtension('routing')->getUrl("listadeproveedoresjson");
         echo "\")
                             .success(function(respuesta){
@@ -121,7 +170,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
              \$scope.getlistadeplantillas=function(){
              
               \$http.get(\"";
-        // line 96
+        // line 103
         echo $this->env->getExtension('routing')->getUrl("listadeplantillasjson");
         echo "\")
                             .success(function(respuesta){
@@ -212,7 +261,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
      
      \$scope.agregar_proveedor= function(proveedor){
          if(\$scope.provedorselecinados.indexOf(proveedor)<0 ){
-          \$scope.provedorselecinados.push(proveedor);
+             proveedor.plantilla={textoenriquecido:''};
+         \$scope.provedorselecinados.push(proveedor);
+       
+           
   }
      }
      
@@ -226,23 +278,51 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 
   }
      };
-     
-       \$scope.cambiarplantilla= function(proveedor){
-         
-          \t  tinymce.init({
-  selector: '#'+proveedor.nombre,
-  height: 500,
-  plugins: 'visualblocks',
-  content_css: 'css/content.css',
- 
-  visualblocks_default_state: true,
-  end_container_on_empty_block: true,
-  content_css: [
-    '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
-    '//www.tinymce.com/css/codepen.min.css'
-  ]
- });
+      \$scope.proveedorvisto={plantilla:{textoenriquecido:''}};
+      
+    tinyMCE.init({
+            selector:'#visorplantilla',
+            mode : \"exact\",
+            elements: \"contenido\",
             
+\t    toolbar : \"miBoton,code,bold,italic,underline,separator,strikethrough,justifyleft,justifycenter,justifyright, justifyfull,bullist,numlist,undo,redo,link,unlink\",
+\t 
+            setup : function(ed) {
+            ed.addButton('miBoton', {
+            title : 'Un botón personalizado',
+            id:'botons',
+          text: 'mi botonazo',
+            onclick : function() {
+\t\t\t\ted.focus();
+                ed.selection.setContent('Hola mundo! ');
+            }
+             });
+         }
+\t});
+
+     
+   
+     
+       \$scope.cambiarplantilla= function(){
+           
+     tinyMCE.get('visorplantilla').setContent( \$scope.proveedorvisto.plantilla.textoenriquecido);
+  
+          tinyMCE.get('visorplantilla').controlManager.get('botons').setDisabled(true);
+           
+           
+     };
+     
+      \$scope.cambiarproveedorvisto= function(proveedor){
+          \$scope.proveedorvisto = proveedor;
+         
+        
+       
+       
+        
+       /* if(proveedor.plantilla!=null){
+       proveedor.plantilla.textoenriquecido=tinyMCE.get('visorplantilla').getContent();
+                 
+           }*/
      };
      
      
@@ -252,7 +332,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
                 
 
                 \$http.post(\"";
-        // line 224
+        // line 262
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getUrl("paqueteconstructormay", array("idcliente" => (isset($context["cliente"]) ? $context["cliente"] : $this->getContext($context, "cliente")))), "html", null, true);
         echo "\", \$scope.paquete)
                             .success(function(respuesta){
@@ -265,15 +345,13 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
         
     
 };
+
+
+
+
 });
 
 
-   \$(function() {
-   
-    \$( \"#fechainicio\" ).datepicker({ dateFormat: 'yy-mm-dd' });
-    \$( \"#fechafin\" ).datepicker({ dateFormat: 'yy-mm-dd' });
-    
-  });
   
 
 </script>
@@ -322,7 +400,9 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
               </tr>
 
             </tbody>
-          </table>  
+          </table> 
+            
+          
             <div class=\" md-inline-form inputdemoBasicUsage\">
                 
                  <md-input-container>
@@ -330,21 +410,17 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
                     <input ng-model=\"paquete.nuevaduracion.dias\">
                   </md-input-container>
          
-            Noches <input  type=\"text\" ng-model=\"paquete.nuevaduracion.noches\"></input>
-            Fecha de Inicio 
-            <div class='input-group date' style=\"width: 120px\" >
-                    <input type='text' class=\"form-control \"  ng-model=\"paquete.nuevaduracion.fechainicio\" id='fechainicio'/>
-                    <span class=\"input-group-addon\"> 
-                        <span class=\"glyphicon glyphicon-calendar\"></span>
-                    </span>
-                </div>
-             Fecha de fin 
-            <div class='input-group date' style=\"width: 120px\" >
-                    <input type='text' class=\"form-control \"  ng-model=\"paquete.nuevaduracion.fechafin\" id='fechafin'/>
-                    <span class=\"input-group-addon\"> 
-                        <span class=\"glyphicon glyphicon-calendar\"></span>
-                    </span>
-                </div>
+                 <md-input-container>
+                 <label>Noches</label>
+             <input  type=\"text\" ng-model=\"paquete.nuevaduracion.noches\"></input>
+             
+              </md-input-container>
+                Fecha de inicio
+                 <md-datepicker ng-model=\"paquete.nuevaduracion.fechainicio\" md-placeholder=\"Fecha de inicio\"></md-datepicker>
+          Fecha de fin 
+             <md-datepicker ng-model=\"paquete.nuevaduracion.fechafin\" md-placeholder=\"Fecha de inicio\"></md-datepicker>
+             
+          
              
                <div></div>
                </div>
@@ -573,6 +649,9 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
      
         </div>
         
+        
+        
+        
         <div id=\"configuracionenvio\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
            <div class=\"modal-dialog\" role=\"document\">
                 <div class=\"modal-content\">
@@ -587,10 +666,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
                       <select name=\"prevedorselec\" ng-options=\"proveedor as proveedor.nombre for proveedor in proveedores \" ng-model=\"prevedorselec\"></select>
                       <button type=\"button\" class=\"btn btn-default\" ng-click=\"agregar_proveedor(prevedorselec)\">Agregar a la lista</button>
                       <table class=\"table table-bordered  \" >
-                        <thead>
-                          <tr >
-                              <th class=\"col-md-2\">Nombre</th><th >Correo electronico </th><th ></th>
-                          </tr>
+                           <thead>
+                                <tr >
+                                    <th class=\"col-md-2\">Nombre proveedor</th><th >Correo electronico </th><th ></th>
+                                </tr>
                           </thead>
                           <tbody>
                           <tr ng-repeat=\"proveedors in provedorselecinados\" >
@@ -606,49 +685,52 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
                       
                       
                          <ul class=\"nav nav-tabs\">
+                             
                         <li class=\"active\"><a data-toggle=\"tab\" href=\"#home\">Home</a></li>
-                        <li  ng-repeat=\"proveedors in provedorselecinados\"><a data-toggle=\"tab\" href=\"#menu/.proveedors.nombre./\">/.proveedors.nombre./</a></li>
+                        <li  class=\"/.prueba(\$index,provedorselecinados) ./\" ng-repeat=\"proveedors in provedorselecinados\" ><a data-toggle=\"tab\" href=\"#contentab/.\$index./\" ng-mousedown=\"cambiarproveedorvisto(proveedors)\" ng-mouseup='actualizartabs(\$index,provedorselecinados)'>/.proveedors.nombre./</a>
+                        
+                        </li>
                        
-                      </ul>
+                       
+                        
+                          </ul>
 
                       <div class=\"tab-content\">
+                          
+                          
                         <div id=\"home\" class=\"tab-pane fade in active\">
                           <h3>HOME</h3>
                           <p>Some content.</p>
                         </div>
                           
                           
-                        <div id=\"menu/.proveedors.nombre./\" class=\"tab-pane \"  ng-repeat=\"proveedors in provedorselecinados\">
+                        <div id=\"contentab/.\$index./\" class=\"tab-pane tab-pane fade in active\"  ng-repeat=\"proveedors in provedorselecinados\">
                             
                             
-                          <h3>sleccione una plantilla para /.proveedors.nombre./</h3>
+                          <h3>Seleccione una plantilla para el proveedor /.proveedors.nombre./</h3>
                           
                           
-                          <p>
-                              <select name=\"plantillaselec\" ng-options=\"plantilla as plantilla.nombre for plantilla in plantillasdis \" ng-model=\"proveedors.plantilla\"        
-                               ng-change=\"cambiarplantilla(proveedors)\"></select>
-                               </p>
+                                    <p>
+                                        <select name=\"plantillaselec/.\$index./\" ng-options=\"plantilla as plantilla.nombre for plantilla in plantillasdis \" ng-model=\"proveedors.plantilla\"        
+                                            ng-change=\"cambiarplantilla()\">
+                                        </select>
+                                    </p>
                               
-                    <textarea id=\"/.proveedors.nombre./\" ng-model=\"proveedors.plantilla.textoenriquecido\">  </textarea>
-                        
-                        este es el    /.proveedors.plantilla.textoenriquecido./  puuu
-                         
-                        </div>
+                                
                         
                       </div>
                       
+                          <textarea id=\"visorplantilla\" >  </textarea>
+                     
+                         
+                        </div>              
                       
+                                                  
+                    
                       
+                                          
                       
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
-                      
+                                       
                       
                       
 
@@ -662,14 +744,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
             
         </div>
         
-         <div class=\"gridStyle\" ng-grid=\"gridOptions\"> 
-            
-                
-          aqueiaqueiaqueiaqueiaqueiaquei
-                
-              
-            
-            </div>
+         
      
      
 </form>
@@ -681,7 +756,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
   
 ";
         
-        $__internal_a39d0266b0a0be9504fef5a9587259874dd0ebd9ebc09f7a75cc76b89827eea7->leave($__internal_a39d0266b0a0be9504fef5a9587259874dd0ebd9ebc09f7a75cc76b89827eea7_prof);
+        $__internal_b902a17e685d35cd092aba4281bd317c2f1583177069555fbd9e747585875a6d->leave($__internal_b902a17e685d35cd092aba4281bd317c2f1583177069555fbd9e747585875a6d_prof);
 
     }
 
@@ -697,17 +772,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 
     public function getDebugInfo()
     {
-        return array (  256 => 224,  125 => 96,  113 => 87,  101 => 78,  22 => 1,);
+        return array (  336 => 262,  174 => 103,  162 => 94,  150 => 85,  117 => 55,  96 => 37,  92 => 36,  87 => 34,  83 => 33,  78 => 31,  74 => 30,  66 => 25,  60 => 22,  52 => 17,  47 => 15,  42 => 13,  37 => 11,  32 => 9,  22 => 1,);
     }
 }
 /* <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">*/
-/* */
-/* <script src="//code.jquery.com/jquery-1.10.2.js"></script>*/
-/* */
-/* <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>*/
-/* */
-/* <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>*/
-/* */
 /* <!-- Latest compiled and minified CSS -->*/
 /* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">*/
 /* */
@@ -715,31 +783,45 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">*/
 /* */
 /* */
-/* <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>*/
+/* <script src="{{asset('bundles/angular/bower_components/jquery/dist/jquery.js')}}" type="text/javascript"></script>*/
+/* */
+/* <script src="{{asset('bundles/angular/bower_components/jquery-ui/jquery-ui.min.js')}}" type="text/javascript"></script>*/
+/* */
+/* <script src="{{asset('bundles/angular/bower_components/angular/angular.min.js')}}" type="text/javascript"></script>*/
+/* */
+/* <script src="{{asset('bundles/angular/bower_components/bootstrap/dist/js/bootstrap.min.js')}}" type="text/javascript"></script>*/
+/* */
+/* <script src="{{asset('bundles/angular/bower_components/angular-material/angular-material.min.js')}}" type="text/javascript"></script>*/
+/* */
 /* */
 /* */
 /* <!-- Angular Material Library -->*/
-/*   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>*/
-/*  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">*/
-/* <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>*/
-/*   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>*/
-/*   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>*/
+/* <link href="{{asset('bundles/angular/bower_components/angular-material/angular-material.min.css')}}" rel="stylesheet" type="text/css"/>*/
 /* */
-/*  */
+/* */
+/*  <script src="{{asset('bundles/angular/bower_components/angular-animate/angular-animate.min.js')}}" type="text/javascript"></script>*/
+/* */
 /*  <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> */
 /* <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>*/
 /* */
+/*  <script src="{{asset('bundles/angular/bower_components/angular-messages/angular-messages.min.js')}}" type="text/javascript"></script>*/
+/*   <script src="{{asset('bundles/angular/bower_components/angular-aria/angular-aria.min.js')}}" type="text/javascript"></script>*/
+/*   */
+/*   <link href="{{asset('bundles/angular/bower_components/angular-ui-grid/ui-grid.min.css')}}" rel="stylesheet" type="text/css"/>*/
+/*   <script src="{{asset('bundles/angular/bower_components/angular-ui-grid/ui-grid.min.js')}}" type="text/javascript"></script>*/
+/*   */
+/*   <script src="{{asset('bundles/tinymce/jscripts/tiny_mce/jquery.tinymce.js')}}" type="text/javascript"></script>*/
+/*   <script src="{{asset('bundles/tinymce/jscripts/tiny_mce/tiny_mce.js')}}" type="text/javascript"></script>*/
+/*  */
 /* */
 /* */
-/* <script src="../../../../web/bundles/tinymce/tinymce.min.js" type="text/javascript"></script>*/
 /* */
+/*  */
 /* */
-/*   <script type="text/javascript" >*/
-/*     </script>*/
-/*   <link href="../../../../web/bundles/tinymce/plugins/visualblocks/css/visualblocks.css" rel="stylesheet" type="text/css"/>*/
+/*   */
 /* <script  type="text/javascript"  >*/
-/*  var dep=['ngMaterial', 'ngMessages', 'material.svgAssetsCache'];*/
-/*     var app = angular.module("myApp",[]);*/
+/*  var dep=['ngMaterial','ui.grid'];*/
+/*     var app = angular.module("myApp",dep);*/
 /*     app.config(function($interpolateProvider){*/
 /*     $interpolateProvider.startSymbol('/.').endSymbol('./');*/
 /*     */
@@ -747,6 +829,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /* </script>*/
 /* */
 /* */
+/* <link href="{{asset('bundles/css/estilos.css')}}" rel="stylesheet" type="text/css"/>*/
 /* */
 /*  */
 /*  */
@@ -757,21 +840,20 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /* */
 /* app.controller("myCtrl", function($scope,$http) {*/
 /*    */
-/*    */
+/*     $scope.actualizartabs=function(index,provedorselecinados){ if(index==provedorselecinados.length-1){ $('#contentab'+index).trigger('click');    } */
+/*         */
+/*         */
+/*     };*/
 /*     $scope.paquete={};*/
 /*         $scope.paquete.rutas=[];*/
 /*          $scope.paquete.incluyes=[];*/
 /*         $scope.paquete.lugarnuevo='';*/
-/*              $scope.proveedores=[{nombre:"juan",id:'12'},{nombre:"lucas",id:'11'}];*/
+/*             */
 /*         $scope.provedorselecinados=[];*/
-/*          $scope.myData = [{name: "Moroni", age: 50},*/
-/*                      {name: "Tiancum", age: 43},*/
-/*                      {name: "Jacob", age: 27},*/
-/*                      {name: "Nephi", age: 29},*/
-/*                      {name: "Enos", age: 34}];*/
+/*        */
 /*          $scope.plantillasdis=[];*/
 /*        $scope.plantillaselec={};*/
-/*     $scope.gridOptions = { data: $scope.myData };*/
+/* */
 /*     */
 /*    */
 /*         */
@@ -884,7 +966,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*      */
 /*      $scope.agregar_proveedor= function(proveedor){*/
 /*          if($scope.provedorselecinados.indexOf(proveedor)<0 ){*/
-/*           $scope.provedorselecinados.push(proveedor);*/
+/*              proveedor.plantilla={textoenriquecido:''};*/
+/*          $scope.provedorselecinados.push(proveedor);*/
+/*        */
+/*            */
 /*   }*/
 /*      }*/
 /*      */
@@ -898,23 +983,51 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /* */
 /*   }*/
 /*      };*/
-/*      */
-/*        $scope.cambiarplantilla= function(proveedor){*/
-/*          */
-/*           	  tinymce.init({*/
-/*   selector: '#'+proveedor.nombre,*/
-/*   height: 500,*/
-/*   plugins: 'visualblocks',*/
-/*   content_css: 'css/content.css',*/
-/*  */
-/*   visualblocks_default_state: true,*/
-/*   end_container_on_empty_block: true,*/
-/*   content_css: [*/
-/*     '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',*/
-/*     '//www.tinymce.com/css/codepen.min.css'*/
-/*   ]*/
-/*  });*/
+/*       $scope.proveedorvisto={plantilla:{textoenriquecido:''}};*/
+/*       */
+/*     tinyMCE.init({*/
+/*             selector:'#visorplantilla',*/
+/*             mode : "exact",*/
+/*             elements: "contenido",*/
 /*             */
+/* 	    toolbar : "miBoton,code,bold,italic,underline,separator,strikethrough,justifyleft,justifycenter,justifyright, justifyfull,bullist,numlist,undo,redo,link,unlink",*/
+/* 	 */
+/*             setup : function(ed) {*/
+/*             ed.addButton('miBoton', {*/
+/*             title : 'Un botón personalizado',*/
+/*             id:'botons',*/
+/*           text: 'mi botonazo',*/
+/*             onclick : function() {*/
+/* 				ed.focus();*/
+/*                 ed.selection.setContent('Hola mundo! ');*/
+/*             }*/
+/*              });*/
+/*          }*/
+/* 	});*/
+/* */
+/*      */
+/*    */
+/*      */
+/*        $scope.cambiarplantilla= function(){*/
+/*            */
+/*      tinyMCE.get('visorplantilla').setContent( $scope.proveedorvisto.plantilla.textoenriquecido);*/
+/*   */
+/*           tinyMCE.get('visorplantilla').controlManager.get('botons').setDisabled(true);*/
+/*            */
+/*            */
+/*      };*/
+/*      */
+/*       $scope.cambiarproveedorvisto= function(proveedor){*/
+/*           $scope.proveedorvisto = proveedor;*/
+/*          */
+/*         */
+/*        */
+/*        */
+/*         */
+/*        /* if(proveedor.plantilla!=null){*/
+/*        proveedor.plantilla.textoenriquecido=tinyMCE.get('visorplantilla').getContent();*/
+/*                  */
+/*            }*//* */
 /*      };*/
 /*      */
 /*      */
@@ -934,15 +1047,13 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*         */
 /*     */
 /* };*/
+/* */
+/* */
+/* */
+/* */
 /* });*/
 /* */
 /* */
-/*    $(function() {*/
-/*    */
-/*     $( "#fechainicio" ).datepicker({ dateFormat: 'yy-mm-dd' });*/
-/*     $( "#fechafin" ).datepicker({ dateFormat: 'yy-mm-dd' });*/
-/*     */
-/*   });*/
 /*   */
 /* */
 /* </script>*/
@@ -991,7 +1102,9 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*               </tr>*/
 /* */
 /*             </tbody>*/
-/*           </table>  */
+/*           </table> */
+/*             */
+/*           */
 /*             <div class=" md-inline-form inputdemoBasicUsage">*/
 /*                 */
 /*                  <md-input-container>*/
@@ -999,21 +1112,17 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*                     <input ng-model="paquete.nuevaduracion.dias">*/
 /*                   </md-input-container>*/
 /*          */
-/*             Noches <input  type="text" ng-model="paquete.nuevaduracion.noches"></input>*/
-/*             Fecha de Inicio */
-/*             <div class='input-group date' style="width: 120px" >*/
-/*                     <input type='text' class="form-control "  ng-model="paquete.nuevaduracion.fechainicio" id='fechainicio'/>*/
-/*                     <span class="input-group-addon"> */
-/*                         <span class="glyphicon glyphicon-calendar"></span>*/
-/*                     </span>*/
-/*                 </div>*/
-/*              Fecha de fin */
-/*             <div class='input-group date' style="width: 120px" >*/
-/*                     <input type='text' class="form-control "  ng-model="paquete.nuevaduracion.fechafin" id='fechafin'/>*/
-/*                     <span class="input-group-addon"> */
-/*                         <span class="glyphicon glyphicon-calendar"></span>*/
-/*                     </span>*/
-/*                 </div>*/
+/*                  <md-input-container>*/
+/*                  <label>Noches</label>*/
+/*              <input  type="text" ng-model="paquete.nuevaduracion.noches"></input>*/
+/*              */
+/*               </md-input-container>*/
+/*                 Fecha de inicio*/
+/*                  <md-datepicker ng-model="paquete.nuevaduracion.fechainicio" md-placeholder="Fecha de inicio"></md-datepicker>*/
+/*           Fecha de fin */
+/*              <md-datepicker ng-model="paquete.nuevaduracion.fechafin" md-placeholder="Fecha de inicio"></md-datepicker>*/
+/*              */
+/*           */
 /*              */
 /*                <div></div>*/
 /*                </div>*/
@@ -1242,6 +1351,9 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*      */
 /*         </div>*/
 /*         */
+/*         */
+/*         */
+/*         */
 /*         <div id="configuracionenvio" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">*/
 /*            <div class="modal-dialog" role="document">*/
 /*                 <div class="modal-content">*/
@@ -1256,10 +1368,10 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*                       <select name="prevedorselec" ng-options="proveedor as proveedor.nombre for proveedor in proveedores " ng-model="prevedorselec"></select>*/
 /*                       <button type="button" class="btn btn-default" ng-click="agregar_proveedor(prevedorselec)">Agregar a la lista</button>*/
 /*                       <table class="table table-bordered  " >*/
-/*                         <thead>*/
-/*                           <tr >*/
-/*                               <th class="col-md-2">Nombre</th><th >Correo electronico </th><th ></th>*/
-/*                           </tr>*/
+/*                            <thead>*/
+/*                                 <tr >*/
+/*                                     <th class="col-md-2">Nombre proveedor</th><th >Correo electronico </th><th ></th>*/
+/*                                 </tr>*/
 /*                           </thead>*/
 /*                           <tbody>*/
 /*                           <tr ng-repeat="proveedors in provedorselecinados" >*/
@@ -1275,49 +1387,52 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*                       */
 /*                       */
 /*                          <ul class="nav nav-tabs">*/
+/*                              */
 /*                         <li class="active"><a data-toggle="tab" href="#home">Home</a></li>*/
-/*                         <li  ng-repeat="proveedors in provedorselecinados"><a data-toggle="tab" href="#menu/.proveedors.nombre./">/.proveedors.nombre./</a></li>*/
+/*                         <li  class="/.prueba($index,provedorselecinados) ./" ng-repeat="proveedors in provedorselecinados" ><a data-toggle="tab" href="#contentab/.$index./" ng-mousedown="cambiarproveedorvisto(proveedors)" ng-mouseup='actualizartabs($index,provedorselecinados)'>/.proveedors.nombre./</a>*/
+/*                         */
+/*                         </li>*/
 /*                        */
-/*                       </ul>*/
+/*                        */
+/*                         */
+/*                           </ul>*/
 /* */
 /*                       <div class="tab-content">*/
+/*                           */
+/*                           */
 /*                         <div id="home" class="tab-pane fade in active">*/
 /*                           <h3>HOME</h3>*/
 /*                           <p>Some content.</p>*/
 /*                         </div>*/
 /*                           */
 /*                           */
-/*                         <div id="menu/.proveedors.nombre./" class="tab-pane "  ng-repeat="proveedors in provedorselecinados">*/
+/*                         <div id="contentab/.$index./" class="tab-pane tab-pane fade in active"  ng-repeat="proveedors in provedorselecinados">*/
 /*                             */
 /*                             */
-/*                           <h3>sleccione una plantilla para /.proveedors.nombre./</h3>*/
+/*                           <h3>Seleccione una plantilla para el proveedor /.proveedors.nombre./</h3>*/
 /*                           */
 /*                           */
-/*                           <p>*/
-/*                               <select name="plantillaselec" ng-options="plantilla as plantilla.nombre for plantilla in plantillasdis " ng-model="proveedors.plantilla"        */
-/*                                ng-change="cambiarplantilla(proveedors)"></select>*/
-/*                                </p>*/
+/*                                     <p>*/
+/*                                         <select name="plantillaselec/.$index./" ng-options="plantilla as plantilla.nombre for plantilla in plantillasdis " ng-model="proveedors.plantilla"        */
+/*                                             ng-change="cambiarplantilla()">*/
+/*                                         </select>*/
+/*                                     </p>*/
 /*                               */
-/*                     <textarea id="/.proveedors.nombre./" ng-model="proveedors.plantilla.textoenriquecido">  </textarea>*/
-/*                         */
-/*                         este es el    /.proveedors.plantilla.textoenriquecido./  puuu*/
-/*                          */
-/*                         </div>*/
+/*                                 */
 /*                         */
 /*                       </div>*/
 /*                       */
+/*                           <textarea id="visorplantilla" >  </textarea>*/
+/*                      */
+/*                          */
+/*                         </div>              */
 /*                       */
+/*                                                   */
+/*                     */
 /*                       */
+/*                                           */
 /*                       */
-/*                       */
-/*                       */
-/*                       */
-/*                       */
-/*                       */
-/*                       */
-/*                       */
-/*                       */
-/*                       */
+/*                                        */
 /*                       */
 /*                       */
 /* */
@@ -1331,14 +1446,7 @@ app.controller(\"myCtrl\", function(\$scope,\$http) {
 /*             */
 /*         </div>*/
 /*         */
-/*          <div class="gridStyle" ng-grid="gridOptions"> */
-/*             */
-/*                 */
-/*           aqueiaqueiaqueiaqueiaqueiaquei*/
-/*                 */
-/*               */
-/*             */
-/*             </div>*/
+/*          */
 /*      */
 /*      */
 /* </form>*/
