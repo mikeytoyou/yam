@@ -33,8 +33,11 @@
   <link href="{{asset('bundles/angular/bower_components/angular-ui-grid/ui-grid.min.css')}}" rel="stylesheet" type="text/css"/>
   <script src="{{asset('bundles/angular/bower_components/angular-ui-grid/ui-grid.min.js')}}" type="text/javascript"></script>
   
-  <script src="{{asset('bundles/tinymce/jscripts/tiny_mce/jquery.tinymce.js')}}" type="text/javascript"></script>
-  <script src="{{asset('bundles/tinymce/jscripts/tiny_mce/tiny_mce.js')}}" type="text/javascript"></script>
+ 
+  <script src="{{asset('bower_components/angular-ui-tinymce/dist/tinymce.min.js')}}" type="text/javascript"></script>
+ 
+
+  <script src="{{asset('bower_components/angular-ui-tinymce/src/tinymce.js')}}" type="text/javascript"></script>
  
 
 
@@ -43,7 +46,7 @@
 
   
 <script  type="text/javascript"  >
- var dep=['ngMaterial','ui.grid'];
+ var dep=['ngMaterial','ui.grid','ui.tinymce'];
     var app = angular.module("myApp",dep);
     app.config(function($interpolateProvider){
     $interpolateProvider.startSymbol('/.').endSymbol('./');
@@ -208,37 +211,76 @@ app.controller("myCtrl", function($scope,$http) {
      };
       $scope.proveedorvisto={plantilla:{textoenriquecido:''}};
       
-    tinyMCE.init({
-            selector:'#visorplantilla',
-            mode : "exact",
-            elements: "contenido",
-            
-	    toolbar : "miBoton,code,bold,italic,underline,separator,strikethrough,justifyleft,justifycenter,justifyright, justifyfull,bullist,numlist,undo,redo,link,unlink",
-	 
-            setup : function(ed) {
+   
+$scope.tinymceOptions = {
+  setup: function(editor) {
+      //Focus the editor on load
+     
+      editor.on("init", function() {
+    alert("hello");
+      });
+      editor.on("click", function() {
+       
+      });
+  },
+  toolbar : "miBoton,code,bold,italic,underline,separator,strikethrough,justifyleft,justifycenter,justifyright, justifyfull,bullist,numlist,undo,redo,link,unlink"
+};
+
+
+
+
+/*
+      tinyMCE.init({
+            selector:'#visorplantilla',                
+            toolbar : "miBoton,code,bold,italic,underline,separator,strikethrough,justifyleft,justifycenter,justifyright, justifyfull,bullist,numlist,undo,redo,link,unlink",
+            body_id: 'my_id',
+               setup : function(ed) {
+
+
+
             ed.addButton('miBoton', {
             title : 'Un botón personalizado',
             id:'botons',
           text: 'mi botonazo',
             onclick : function() {
-				ed.focus();
+        ed.focus();
                 ed.selection.setContent('Hola mundo! ');
             }
              });
-         }
-	});
+         
 
-     
+
+ed.onChange.add(function(ed, l) {
+                  console.debug('Editor contents was modified. Contents: ' + l.content);
+                  $scope.proveedorvisto.plantilla.textoenriquecido=ed.getContent();
+          });
+   }
+
+
+
+
+
+
+         }
+  ); */
    
      
        $scope.cambiarplantilla= function(){
-           
-     tinyMCE.get('visorplantilla').setContent( $scope.proveedorvisto.plantilla.textoenriquecido);
+
+
+/*tinyMCE.get('visorplantilla').setContent('<div ng-model="/.proveedorvisto.plantilla.textoenriquecido./">'+ $scope.proveedorvisto.plantilla.textoenriquecido+'</div>');
   
-          tinyMCE.get('visorplantilla').controlManager.get('botons').setDisabled(true);
+     */    
+
            
-           
+  
      };
+
+     $scope.cambiarplantillapost= function(){
+
+      /*  */
+
+     }
      
       $scope.cambiarproveedorvisto= function(proveedor){
           $scope.proveedorvisto = proveedor;
@@ -253,7 +295,7 @@ app.controller("myCtrl", function($scope,$http) {
            }*/
      };
      
-     
+     $scope.tinymceModel="holas";
      
      $scope.paquete.guardar=function(){
          
@@ -637,7 +679,7 @@ app.controller("myCtrl", function($scope,$http) {
                           
                                     <p>
                                         <select name="plantillaselec/.$index./" ng-options="plantilla as plantilla.nombre for plantilla in plantillasdis " ng-model="proveedors.plantilla"        
-                                            ng-change="cambiarplantilla()">
+                                            ng-change="cambiarplantilla()" ng-mouseleave="cambiarplantillapost()">
                                         </select>
                                     </p>
                               
@@ -645,7 +687,7 @@ app.controller("myCtrl", function($scope,$http) {
                         
                       </div>
                       
-                          <textarea id="visorplantilla" >  </textarea>
+                          <textarea  ui-tinymce  ng-model="tinymceModel">  </textarea>
                      
                          
                         </div>              
